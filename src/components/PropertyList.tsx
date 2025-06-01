@@ -1,7 +1,9 @@
 import type { HouseDetail } from "../model/HouseDetail.ts";
 import { Container, Stack, Typography } from "@mui/material";
-import { DataGrid, type GridColDef } from "@mui/x-data-grid";
+import { DataGridPremium, type DataGridPremiumProps, type GridColDef } from "@mui/x-data-grid-premium";
 import type { Apartment } from "../model/Apartment.ts";
+import { useCallback } from "react";
+import { PropertyDetail } from "./PropertyDetail.tsx";
 
 type Props = {
   house: HouseDetail;
@@ -16,13 +18,25 @@ const columns: GridColDef<Apartment>[] = [
 ];
 
 export const PropertyList = ({ house }: Props) => {
+  const getDetailPanelContent = useCallback<NonNullable<DataGridPremiumProps["getDetailPanelContent"]>>(
+    ({ row }) => <PropertyDetail data={row} />,
+    []
+  );
+
+  const getDetailPanelHeight = useCallback(() => 400, []);
+
   return (
     <Container>
-      <Stack>
-        <Typography variant={"h2"}>{house.name}</Typography>
-        <div style={{ height: 300, width: "100%" }}>
-          <DataGrid rows={house.apartments} columns={columns} />
-        </div>
+      <Stack pb={6}>
+        <Typography variant={"h3"}>{house.name}</Typography>
+        <DataGridPremium
+          rows={house.apartments}
+          columns={columns}
+          getDetailPanelHeight={getDetailPanelHeight}
+          getDetailPanelContent={getDetailPanelContent}
+          disableRowSelectionOnClick
+          hideFooter
+        />
       </Stack>
     </Container>
   );

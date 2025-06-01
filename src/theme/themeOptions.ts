@@ -7,20 +7,25 @@ export const themeOptions: ThemeOptions = {
 
   // Typography
   typography: {
-    fontSize: 12.25,
-    fontWeightRegular: 300,
-    fontFamily: "Cormorant Garamond",
-
     h1: {
       fontSize: 100,
       fontWeight: 300,
+      fontFamily: "Cormorant Garamond",
     },
     h2: {
-      fontSize: 40,
-      fontWeight: 700,
+      fontSize: 64,
+      letterSpacing: 0.8,
+      fontWeight: 300,
+      textAlign: "center",
+      fontFamily: "Cormorant Garamond",
+      marginTop: 80,
+      marginBottom: 50,
     },
     h3: {
-      fontSize: 20,
+      fontSize: 32,
+      fontFamily: "Cormorant Garamond",
+      marginTop: 40,
+      marginBottom: 20,
     },
   },
 

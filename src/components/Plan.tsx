@@ -11,7 +11,10 @@ type Props = {
   onSelectedHouse: (house: HouseDetail) => void;
 };
 
-const getData = (width: number, height: number): HouseDetail[] => {
+const width = window.innerWidth * 0.8;
+const height = window.innerHeight;
+
+const getData = (): HouseDetail[] => {
   return data.map((house) => ({
     ...house,
     position: { x: width / house.position.x, y: height / house.position.y },
@@ -28,7 +31,7 @@ export const Plan = (props: Props) => {
   const [hoveredArea, setHoveredArea] = useState<string>();
   const [backgroundImage] = useImage(plan);
 
-  const areas = getData(window.innerWidth, window.innerHeight);
+  const areas = getData();
 
   const handleMouseOver = (id: string) => {
     setHoveredArea(id);
@@ -60,9 +63,9 @@ export const Plan = (props: Props) => {
   };
 
   return (
-    <Stage width={window.innerWidth} height={window.innerHeight}>
+    <Stage width={width} height={height} style={{ margin: "auto" }}>
       <Layer>
-        <Image x={1} y={0} image={backgroundImage} width={window.innerWidth} height={window.innerHeight} />
+        <Image x={1} y={0} image={backgroundImage} width={width} height={height} />
       </Layer>
       <Layer>
         {areas.map((area) => (

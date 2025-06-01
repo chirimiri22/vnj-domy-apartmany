@@ -1,30 +1,23 @@
-import { createTheme, CssBaseline, Stack, ThemeProvider } from "@mui/material";
-import { Plan } from "./components/Plan.tsx";
+import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 import { Jumbotron } from "./components/Jumbotron.tsx";
 import { Footer } from "./components/Footer.tsx";
 import { BrowserRouter } from "react-router";
 import { themeOptions } from "./theme/themeOptions.ts";
-import { PropertyList } from "./components/PropertyList.tsx";
-import type { HouseDetail } from "./model/HouseDetail.ts";
-import { useEffect, useRef, useState } from "react";
+import { Standards } from "./components/Standards.tsx";
+import { Houses } from "./components/Houses.tsx";
+import { LicenseInfo } from "@mui/x-license";
 
 const theme = createTheme(themeOptions);
+LicenseInfo.setLicenseKey(import.meta.env.REACT_APP_MUI_LICENCE_KEY ?? "");
 
 function App() {
-  const [selectedHouse, setSelectedHouse] = useState<HouseDetail>();
-  const listContainerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    listContainerRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [selectedHouse]);
-
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Jumbotron />
-        <Plan onSelectedHouse={setSelectedHouse} />
-        <Stack ref={listContainerRef}>{selectedHouse && <PropertyList house={selectedHouse} />}</Stack>
+        <Standards />
+        <Houses />
         <Footer />
       </ThemeProvider>
     </BrowserRouter>
