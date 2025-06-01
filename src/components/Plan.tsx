@@ -2,68 +2,60 @@ import { Circle, Image, Label, Layer, Stage, Tag, Text } from "react-konva";
 import { useState } from "react";
 import useImage from "use-image";
 import plan from "../assets/plan.png";
+import type { HouseDetail } from "../model/HouseDetail.ts";
+import { data } from "../constants/data.ts";
+import { Colors } from "../theme/colors.ts";
+import Konva from "konva";
 
-const getData = (width: number, height: number) => ({
-  "1st BD": {
-    key: "1st-bd",
-    x: width / 12,
-    y: height / 3,
-  },
-  "2nd BD": {
-    key: "2nd-bd",
-    x: width / 3.5,
-    y: height / 8,
-  },
-  "3rd BD": {
-    key: "3rd-bd",
-    x: width / 1.9,
-    y: height / 6,
-  },
-  "4th BD": {
-    key: "4th-bd",
-    x: width / 1.3,
-    y: height / 6,
-  },
-  "5th BD": {
-    key: "5th-bd",
-    x: width / 1.3,
-    y: height / 1.7,
-  },
-});
+type Props = {
+  onSelectedHouse: (house: HouseDetail) => void;
+};
 
-export const Plan = () => {
+const getData = (width: number, height: number): HouseDetail[] => {
+  return data.map((house) => ({
+    ...house,
+    position: { x: width / house.position.x, y: height / house.position.y },
+  }));
+};
+
+export const Plan = (props: Props) => {
   const [tooltipProps, setTooltipProps] = useState({
     visible: false,
     x: 0,
     y: 0,
     text: "",
   });
-  const [hoveredArea, setHoveredArea] = useState(null);
+  const [hoveredArea, setHoveredArea] = useState<string>();
   const [backgroundImage] = useImage(plan);
 
   const areas = getData(window.innerWidth, window.innerHeight);
 
-  const handleMouseOver = (e, key) => {
-    setHoveredArea(key);
+  const handleMouseOver = (id: string) => {
+    setHoveredArea(id);
   };
 
-  const handleMouseClick = (key) => {
-    setHoveredArea(key);
+  const handleMouseClick = (house: HouseDetail) => {
+    setHoveredArea(house.id);
+    props.onSelectedHouse(house);
   };
 
   const handleMouseOut = () => {
-    setHoveredArea(null);
+    setHoveredArea(undefined);
     setTooltipProps((prev) => ({ ...prev, visible: false }));
   };
 
-  const handleMouseMove = (e, key) => {
+  const handleMouseMove = (e: Konva.KonvaEventObject<MouseEvent>, house: HouseDetail) => {
     const stage = e.target.getStage();
+    if (!stage) return;
+
     const mousePos = stage.getPointerPosition();
+    if (!mousePos) return;
+
     setTooltipProps({
       visible: true,
       x: mousePos.x,
       y: mousePos.y - 5,
-      text: key,
+      text: house.name,
     });
   };
 
@@ -73,20 +65,20 @@ export const Plan = () => {
         <Image x={1} y={0} image={backgroundImage} width={window.innerWidth} height={window.innerHeight} />
       </Layer>
       <Layer>
-        {Object.entries(areas).map(([key, area]) => (
+        {areas.map((area) => (
           <Circle
-            key={key}
-            x={area.x}
-            y={area.y}
+            key={area.id}
+            x={area.position.x}
+            y={area.position.y}
             radius={20}
+            fill={Colors.primary}
+            opacity={hoveredArea === area.id ? 0.5 : 1}
             strokeWidth={4}
-            fill="white"
-            stroke={hoveredArea === key ? "none" : "white"}
-            opacity={hoveredArea === key ? 0.5 : 0.25}
-            onMouseOver={(e) => handleMouseOver(e, key)}
+            stroke={hoveredArea === area.id ? "none" : Colors.black}
+            onMouseOver={() => handleMouseOver(area.id)}
             onMouseOut={handleMouseOut}
-            onMouseMove={(e) => handleMouseMove(e, key)}
-            onClick={() => handleMouseClick(key)}
+            onMouseMove={(e) => handleMouseMove(e, area)}
+            onClick={() => handleMouseClick(area)}
           />
         ))}
       </Layer>
