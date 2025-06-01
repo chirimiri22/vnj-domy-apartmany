@@ -1,4 +1,4 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Container, Stack, Typography } from "@mui/material";
 import { Colors } from "../theme/colors.ts";
 import video from "../assets/video.mp4";
 
@@ -37,10 +37,12 @@ export const Jumbotron = () => {
           background: "linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7))",
         }}
       >
-        <Typography variant={"h1"} letterSpacing={1} textAlign={"center"}>
-          Bydlete
-          <br />v <Box sx={{ display: "inline-block", color: Colors.primary }}>dokonalém</Box> luxusu
-        </Typography>
+        <Container>
+          <Typography variant={"h1"} letterSpacing={1} textAlign={"center"}>
+            Bydlete
+            <br />v <Box sx={{ display: "inline-block", color: Colors.primary }}>dokonalém</Box> luxusu
+          </Typography>
+        </Container>
       </Stack>
     </Stack>
   );

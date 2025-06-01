@@ -8,6 +8,7 @@ export const data: HouseDetail[] = [
     position: { x: 12, y: 3 },
     apartments: [
       {
+        id: "a1",
         number: "A1",
         layout: "1kk",
         totalArea: 33,
@@ -22,6 +23,7 @@ export const data: HouseDetail[] = [
     position: { x: 3.5, y: 8 },
     apartments: [
       {
+        id: "b1",
         number: "B1",
         layout: "1kk",
         totalArea: 33,
@@ -36,6 +38,7 @@ export const data: HouseDetail[] = [
     position: { x: 1.9, y: 6 },
     apartments: [
       {
+        id: "b1",
         number: "C1",
         layout: "1kk",
         totalArea: 33,
@@ -50,6 +53,7 @@ export const data: HouseDetail[] = [
     position: { x: 1.3, y: 6 },
     apartments: [
       {
+        id: "d1",
         number: "D1",
         layout: "1kk",
         totalArea: 33,
@@ -64,6 +68,7 @@ export const data: HouseDetail[] = [
     position: { x: 1.3, y: 1.7 },
     apartments: [
       {
+        id: "e1",
         number: "E1",
         layout: "1kk",
         totalArea: 33,
