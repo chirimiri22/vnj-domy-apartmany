@@ -10,6 +10,6 @@ export type Apartment = {
   garden: number;
   storage: number;
   garage: number;
-  price: string;
+  price: number;
   status: ApartmentStatus;
 };
