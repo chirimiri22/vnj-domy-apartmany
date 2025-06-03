@@ -4,7 +4,7 @@ import { ApartmentStatus } from "../model/ApartmentStatus.ts";
 export const data: HouseDetail[] = [
   {
     id: "a",
-    name: "Dům 1",
+    name: "Dům Alžběta",
     position: { x: 12, y: 3 },
     apartments: [
       {
@@ -50,7 +50,7 @@ export const data: HouseDetail[] = [
   },
   {
     id: "b",
-    name: "Dům 2",
+    name: "Dům Barbora",
     position: { x: 3.5, y: 8 },
     apartments: [
       {
@@ -96,7 +96,7 @@ export const data: HouseDetail[] = [
   },
   {
     id: "c",
-    name: "Dům 3",
+    name: "Dům Cecílie",
     position: { x: 1.9, y: 6 },
     apartments: [
       {
@@ -142,7 +142,7 @@ export const data: HouseDetail[] = [
   },
   {
     id: "d",
-    name: "Dům 4",
+    name: "Dům Dana",
     position: { x: 1.3, y: 6 },
     apartments: [
       {
@@ -188,7 +188,7 @@ export const data: HouseDetail[] = [
   },
   {
     id: "e",
-    name: "Dům 5",
+    name: "Dům Eliška",
     position: { x: 1.3, y: 1.7 },
     apartments: [
       {
