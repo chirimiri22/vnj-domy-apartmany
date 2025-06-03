@@ -18,7 +18,7 @@ export const data: HouseDetail[] = [
         storage: 9.35,
         garage: 1,
         price: 16073870,
-        status: ApartmentStatus.Free,
+        status: ApartmentStatus.Sold,
       },
       {
         id: "RD1B2",
@@ -64,7 +64,7 @@ export const data: HouseDetail[] = [
         storage: 9.35,
         garage: 1,
         price: 16370494,
-        status: ApartmentStatus.Free,
+        status: ApartmentStatus.Sold,
       },
       {
         id: "RD2B2",
@@ -90,7 +90,7 @@ export const data: HouseDetail[] = [
         storage: 8.7,
         garage: 1,
         price: 11239361,
-        status: ApartmentStatus.Free,
+        status: ApartmentStatus.InReservation,
       },
     ],
   },
@@ -136,7 +136,7 @@ export const data: HouseDetail[] = [
         storage: 8.7,
         garage: 1,
         price: 11253911,
-        status: ApartmentStatus.Free,
+        status: ApartmentStatus.Sold,
       },
     ],
   },
@@ -169,7 +169,7 @@ export const data: HouseDetail[] = [
         storage: 8.7,
         garage: 1,
         price: 11615095,
-        status: ApartmentStatus.Free,
+        status: ApartmentStatus.InReservation,
       },
       {
         id: "RD4B3",
@@ -215,7 +215,7 @@ export const data: HouseDetail[] = [
         storage: 8.7,
         garage: 1,
         price: 11631241,
-        status: ApartmentStatus.Free,
+        status: ApartmentStatus.InReservation,
       },
       {
         id: "RD5B3",
