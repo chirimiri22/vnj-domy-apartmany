@@ -18,7 +18,7 @@ export const PropertyDetail = () => {
     <Stack>
       <TitleSection house={property} image={visualisation} />
 
-      <Gallery />
+      <Gallery  />
     </Stack>
   );
 };
