@@ -1,9 +1,10 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import { base } from "./src/App.tsx";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/vnj-domy-apartmany",
+  base: base,
   plugins: [react()],
   server: {
     port: 3000,

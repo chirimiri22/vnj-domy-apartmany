@@ -1,14 +1,13 @@
 import type { HouseDetail } from "../model/HouseDetail.ts";
 import { Container, Stack, Typography } from "@mui/material";
-import { DataGridPremium, type DataGridPremiumProps, type GridColDef } from "@mui/x-data-grid-premium";
+import { DataGridPremium, type GridColDef } from "@mui/x-data-grid-premium";
 import type { Apartment } from "../model/Apartment.ts";
-import { useCallback } from "react";
-import { PropertyDetail } from "./PropertyDetail.tsx";
+
 
 type Props = {
   house: HouseDetail;
 };
-
+//  todo: click on row to show detail
 export const columns: GridColDef<Apartment>[] = [
   { field: "number", headerName: "Číslo bytu", width: 85 },
   { field: "layout", headerName: "Dispozice", width: 85 },
@@ -20,15 +19,11 @@ export const columns: GridColDef<Apartment>[] = [
   { field: "garage", headerName: "Garáž", width: 75 },
   { field: "price", headerName: "Cena (Kč)", width: 120 },
   { field: "status", headerName: "Stav", width: 120 },
+
 ];
 
 export const PropertyList = ({ house }: Props) => {
-  const getDetailPanelContent = useCallback<NonNullable<DataGridPremiumProps["getDetailPanelContent"]>>(
-    ({ row }) => <PropertyDetail data={row} />,
-    []
-  );
 
-  const getDetailPanelHeight = useCallback(() => 400, []);
 
   return (
     <Container>
@@ -37,9 +32,11 @@ export const PropertyList = ({ house }: Props) => {
         <DataGridPremium
           rows={house.apartments}
           columns={columns}
-          getDetailPanelHeight={getDetailPanelHeight}
-          getDetailPanelContent={getDetailPanelContent}
-          disableRowSelectionOnClick
+          onRowClick={(row) => {
+            console.log(row.id);
+          }}
+
+          // disableRowSelectionOnClick
           hideFooter
         />
       </Stack>

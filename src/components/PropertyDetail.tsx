@@ -1,15 +1,14 @@
-import type { Apartment } from "../model/Apartment";
+// import type { Apartment } from "../model/Apartment";
 import { Stack } from "@mui/material";
+import { useParams } from "react-router";
 
-type Props = {
-  data: Apartment;
-};
 
-export const PropertyDetail = ({ data }: Props) => {
+export const PropertyDetail = () => {
+  const {id} = useParams();
   return (
     <Stack>
-      <strong>{data.number}</strong>
-      todo
+      <strong>{id}</strong>
+      PROPERTY DETAIL
     </Stack>
   );
 };

@@ -12,7 +12,7 @@ type Props = {
 };
 
 const width = window.innerWidth * 0.8;
-const height = window.innerHeight;
+const height = width / 2;
 
 const getData = (): HouseDetail[] => {
   return data.map((house) => ({
