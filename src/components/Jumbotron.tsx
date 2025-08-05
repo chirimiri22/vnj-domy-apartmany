@@ -7,10 +7,12 @@ export const Jumbotron = () => {
   return (
     <Stack
       sx={{
+        width: "100%",
         height: "100vh",
         position: "relative",
       }}
     >
+      {/*todo: when page is shown on mobile we need to adjust the video size*/}
       <video
         autoPlay
         muted
