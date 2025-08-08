@@ -10,18 +10,11 @@ type Props = {
 
 export const TitleSection = ({ house, image }: Props) => {
   return (
-    <Stack alignItems={"center"} height={"100vh"}>
-      {/* todo: in case this is not needed refactor*/}
-      <Typography variant={"h2"} letterSpacing={1} textAlign={"center"}>
+    <Stack alignItems={"center"} height={"100vh"} justifyContent={"center"} >
+      <img src={image} alt="House visualization" style={{ height: "70%" }} />
+      <Typography variant={"h2"} letterSpacing={1} textAlign={"center"} flex={1}>
         <Box sx={{ display: "inline-block", color: Colors.primary }}>{house.name}</Box>
       </Typography>
-
-      <Stack >
-        <img
-          src={image}
-          alt="House visualization"
-        />
-      </Stack>
     </Stack>
   );
 };

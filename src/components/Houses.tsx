@@ -1,10 +1,13 @@
 import { Plan } from "./Plan.tsx";
 import { Stack, Typography } from "@mui/material";
-import { PropertyList } from "./PropertyList.tsx";
 import { useEffect, useRef, useState } from "react";
 import type { HouseDetail } from "../model/HouseDetail.ts";
 
-export const Houses = () => {
+type Props = {
+  title?: string;
+};
+
+export const Houses = ({ title }: Props) => {
   const [selectedHouse, setSelectedHouse] = useState<HouseDetail>();
   const listContainerRef = useRef<HTMLDivElement>(null);
 
@@ -14,9 +17,8 @@ export const Houses = () => {
 
   return (
     <Stack>
-      <Typography variant={"h2"}>Vyberte si svůj dům</Typography>
+      <Typography variant={"h2"}>{title}</Typography>
       <Plan onSelectedHouse={setSelectedHouse} />
-      <Stack ref={listContainerRef}>{selectedHouse && <PropertyList house={selectedHouse} />}</Stack>
     </Stack>
   );
 };

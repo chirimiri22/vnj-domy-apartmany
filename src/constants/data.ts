@@ -31,7 +31,7 @@ export const data: HouseDetail[] = [
         storage: 8.7,
         garage: 1,
         price: 11828209,
-        status: ApartmentStatus.Free,
+        status: ApartmentStatus.Sold,
       },
       {
         id: "RD1B3",
@@ -44,7 +44,7 @@ export const data: HouseDetail[] = [
         storage: 8.7,
         garage: 1,
         price: 11445521,
-        status: ApartmentStatus.Free,
+        status: ApartmentStatus.Sold,
       },
     ],
   },

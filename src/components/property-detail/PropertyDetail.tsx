@@ -1,11 +1,13 @@
-import {  Stack } from "@mui/material";
+import { Container, Stack, Typography } from "@mui/material";
 import { useParams } from "react-router";
 import { data } from "../../constants/data.ts";
 import { useState } from "react";
 
 import visualisation from "../../assets/houses/A1-transparent.png";
 import { TitleSection } from "./TitleSection.tsx";
-import { Gallery } from "./Gallery.tsx"; // Assuming this is the correct path to your data
+import { Gallery } from "./Gallery.tsx";
+import { Stats } from "../Stats.tsx";
+import { Houses } from "../Houses.tsx";
 
 export const PropertyDetail = () => {
   const { id } = useParams();
@@ -17,8 +19,20 @@ export const PropertyDetail = () => {
   return (
     <Stack>
       <TitleSection house={property} image={visualisation} />
+      <Container>
+        <Stats stats={data[0].apartments[0]} />
+        <Typography mt={5} mb={8}>
+          Dům Alžběta se nachází na pozici 12×3 a nabízí klidné bydlení v moderním rodinném domě s jediným prostorným
+          bytem. Tento dům je ideální pro ty, kteří hledají soukromí, komfort a přímý kontakt s přírodou. Dům vyniká
+          promyšlenou architekturou a vysokým standardem vybavení. Byt RD1B1 má dispozici 3+kk a nabízí užitnou plochu
+          97,74 m², přičemž celková plocha včetně příslušenství činí 103,67 m². K bytu náleží prostorná zahrada o
+          velikosti 171,33 m², balkon o ploše 9 m², sklep o velikosti 9,35 m² a jedno garážové stání. Tento byt byl již
+          prodán.
+        </Typography>
+      </Container>
 
-      <Gallery  />
+      <Gallery />
+      <Houses title={"Celý plánek"} />
     </Stack>
   );
 };

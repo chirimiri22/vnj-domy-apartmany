@@ -9,9 +9,9 @@ export const Home = () => {
   return (
     <Stack>
       <Jumbotron />
+      <Houses />
       <Standards />
       <Gallery />
-      <Houses />
       <Footer />
     </Stack>
   )
