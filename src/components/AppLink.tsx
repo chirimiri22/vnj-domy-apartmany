@@ -5,9 +5,10 @@ type Props = {
   onClick?: () => void;
   title: React.ReactNode;
   active?: boolean;
+  startIcon?: React.ReactNode;
 };
 
-export const AppLink = ({ onClick, title, active = false} : Props) => {
+export const AppLink = ({ onClick, title, active = false, startIcon} : Props) => {
   return (
     <Button
       onClick={onClick}
@@ -25,6 +26,7 @@ export const AppLink = ({ onClick, title, active = false} : Props) => {
         minWidth: 0,
         padding: 0,
       }}
+      startIcon={startIcon}
     >
       {title}
     </Button>

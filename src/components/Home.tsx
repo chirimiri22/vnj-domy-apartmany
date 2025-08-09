@@ -2,17 +2,47 @@ import { Jumbotron } from "./Jumbotron.tsx";
 import { Standards } from "./Standards.tsx";
 import { Houses } from "./Houses.tsx";
 import { Footer } from "./Footer.tsx";
-import { Stack } from "@mui/material";
+import { Box, Collapse, Container, Stack, Typography } from "@mui/material";
 import { Gallery } from "./property-detail/Gallery.tsx";
+import { PropertyList } from "./PropertyList.tsx";
+import { data } from "../constants/data.ts";
+import { Colors } from "../theme/colors.ts";
+import { AppButton } from "./AppButton.tsx";
+import { useState } from "react";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+import { useNavigate } from "react-router";
+import { base } from "../constants/constants.ts";
+import { apartmentToCol } from "../utils/apartmentToCol.ts";
+import { useScrollToTopOnLoad } from "../hook/useScrollToTopOnLoad.ts";
 
 export const Home = () => {
+  const [showTable, setShowTable] = useState(false);
+  const navigate = useNavigate();
+
+  useScrollToTopOnLoad([]);
+
+  const allApartments = data.flatMap((house) => house.apartments.map((ap) => apartmentToCol(ap, house)));
   return (
     <Stack>
       <Jumbotron />
       <Houses />
+      <Container>
+        <Stack alignItems={"center"} gap={1}>
+          <AppButton
+            icon={showTable ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+            onClick={() => setShowTable((prev) => !prev)}
+            title={"Seznam všech bytů"}
+          />
+
+          <Collapse in={showTable}>
+            <PropertyList apartments={allApartments} onClickProperty={(id) => navigate(`/${base}/${id}`)} />
+          </Collapse>
+        </Stack>
+      </Container>
+
       <Standards />
       <Gallery />
-      <Footer />
     </Stack>
-  )
-}
+  );
+};

@@ -24,6 +24,7 @@ function App() {
           <Route path={base} element={<Home />} />
           <Route path={`${base}/:id`} element={<PropertyDetail />} />
         </Routes>
+        <Footer />
       </ThemeProvider>
     </BrowserRouter>
   );

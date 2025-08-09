@@ -6,15 +6,19 @@ import type { HouseDetail } from "../model/HouseDetail.ts";
 import { data } from "../constants/data.ts";
 import { Colors } from "../theme/colors.ts";
 import { Html } from "react-konva-utils";
-import { Stack, Typography, useMediaQuery } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import { ApartmentStatus } from "../model/ApartmentStatus.ts";
 import CircleIcon from "@mui/icons-material/Circle";
+import { useNavigate } from "react-router";
+import { base } from "../constants/constants.ts";
 
 type Props = {
   onSelectedHouse: (house: HouseDetail) => void;
 };
 
-const width = window.innerWidth * 0.8;
+const isMobile = window.innerWidth <= 768; // Adjust this value based on your mobile breakpoint
+
+const width = window.innerWidth * (isMobile ? 1.05 : 0.8);
 const height = width / 2;
 
 const getData = (): HouseDetail[] => {
@@ -23,9 +27,9 @@ const getData = (): HouseDetail[] => {
     position: { x: width / house.position.x, y: height / house.position.y },
   }));
 };
-// todo: hovering doesnt work on mobile, need to use touch events and
-export const Plan = (props: Props) => {
-  const isMobile = useMediaQuery("(max-width:768px)");
+
+export const Plan = () => {
+  const navigate = useNavigate();
 
   const [hoveredArea, setHoveredArea] = useState<HouseDetail>();
   const [backgroundImage] = useImage(plan);
@@ -37,8 +41,7 @@ export const Plan = (props: Props) => {
   };
 
   const handleMouseClick = (house: HouseDetail) => {
-    setHoveredArea(house);
-    props.onSelectedHouse(house);
+    navigate(`/${base}/${house.id}`);
   };
 
   const handleMouseOut = () => {
@@ -46,7 +49,7 @@ export const Plan = (props: Props) => {
   };
 
   return (
-    <Stage width={width} height={height} style={{ margin: "auto" }}>
+    <Stage width={width} height={height} style={{ margin: "auto", cursor: hoveredArea ? "pointer" : "default" }}>
       <Layer>
         <Image x={1} y={0} image={backgroundImage} width={width} height={height} />
       </Layer>
@@ -56,33 +59,30 @@ export const Plan = (props: Props) => {
             key={area.id}
             x={area.position.x}
             y={area.position.y}
-            radius={20}
+            radius={isMobile ? 15 : 20}
             fill={Colors.primary}
             strokeWidth={4}
             stroke={hoveredArea?.id === area.id ? "none" : Colors.black}
             onMouseOver={() => handleMouseOver(area)}
             onMouseOut={handleMouseOut}
             onClick={() => handleMouseClick(area)}
+            onTouchStart={() => {
+              // todo: is this correct way to handle touch events?
+              handleMouseClick(area);
+            }}
           />
         ))}
       </Layer>
       <Layer>
-        {hoveredArea && (
+        {hoveredArea && !isMobile && (
           <Html
-            groupProps={
-              isMobile
-                ? {
-                    x: width / 2 - 100,
-                    y: height / 2 - 125, // Adjust position based on number of apartments
-                  }
-                : {
-                    x: hoveredArea.position.x - 100,
-                    y:
-                      hoveredArea.position.y -
-                      125 -
-                      30 * hoveredArea.apartments.filter((x) => x.status === ApartmentStatus.Free).length, // Adjust position based on number of apartments
-                  }
-            }
+            groupProps={{
+              x: hoveredArea.position.x - 100,
+              y:
+                hoveredArea.position.y -
+                125 -
+                30 * hoveredArea.apartments.filter((x) => x.status === ApartmentStatus.Free).length, // Adjust position based on number of apartments
+            }}
             divProps={{
               style: {
                 background: "transparent",
@@ -112,7 +112,7 @@ export const Plan = (props: Props) => {
                     <Stack direction="row" alignItems="center" gap={1}>
                       <CircleIcon fontSize="small" sx={{ color: Colors.primary }} />
                       <Typography variant="body2">
-                        <b> {apt.number} </b>, {apt.layout}
+                        <b>{apt.number}</b>, {apt.layout}
                       </Typography>
                     </Stack>
                   </Stack>
