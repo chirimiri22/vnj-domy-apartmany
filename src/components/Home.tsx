@@ -35,7 +35,7 @@ export const Home = () => {
             title={"Seznam všech bytů"}
           />
 
-          <Collapse in={showTable}>
+          <Collapse in={showTable} style={{ width: "100%" }}>
             <PropertyList apartments={allApartments} onClickProperty={(id) => navigate(`/${base}/${id}`)} />
           </Collapse>
         </Stack>

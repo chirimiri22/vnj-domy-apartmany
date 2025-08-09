@@ -1,6 +1,7 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { Colors } from "../theme/colors.ts";
 import video from "../assets/video.mp4";
+import { isMobile } from "../App.tsx";
 
 export const Jumbotron = () => {
   const viewportHeight = window.innerHeight;
@@ -39,7 +40,7 @@ export const Jumbotron = () => {
         }}
       >
         <Container>
-          <Typography variant={"h1"} letterSpacing={1} textAlign={"center"}>
+          <Typography variant={isMobile ? "h2" : "h1"} letterSpacing={1} textAlign={"center"}>
             Bydlete
             <br />v <Box sx={{ display: "inline-block", color: Colors.primary }}>dokonalém</Box> luxusu
           </Typography>
