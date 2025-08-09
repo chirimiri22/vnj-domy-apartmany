@@ -7,11 +7,12 @@ export const Jumbotron = () => {
   return (
     <Stack
       sx={{
-        width: "100vw",
+        width: "100%",
         height: "100vh",
         position: "relative",
       }}
     >
+      {/*todo: when page is shown on mobile we need to adjust the video size*/}
       <video
         autoPlay
         muted
@@ -38,7 +39,7 @@ export const Jumbotron = () => {
         }}
       >
         <Container>
-          <Typography variant={"h1"} letterSpacing={1} textAlign={"center"}>
+          <Typography variant="h1" sx={{ typography: { xs: "h2", md: "h1" } }} letterSpacing={1} textAlign={"center"}>
             Bydlete
             <br />v <Box sx={{ display: "inline-block", color: Colors.primary }}>dokonalém</Box> luxusu
           </Typography>
