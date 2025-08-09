@@ -14,7 +14,6 @@ import "swiper/css/navigation";
 const theme = createTheme(themeOptions);
 LicenseInfo.setLicenseKey(import.meta.env.REACT_APP_MUI_LICENCE_KEY ?? "");
 
-
 export const isMobile = window.innerWidth <= 768;
 
 function App() {
