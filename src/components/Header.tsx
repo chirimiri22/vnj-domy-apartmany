@@ -1,4 +1,4 @@
-import { Box, Stack } from "@mui/material";
+import { Stack } from "@mui/material";
 
 import { AppLink } from "./AppLink";
 import { useState } from "react";
@@ -11,13 +11,7 @@ export const Header = () => {
   const [locale, setLocale] = useState("en");
 
   return (
-    <Stack direction="row" p={1} px={2} justifyContent={"space-between"}>
-      <Stack />
-      <Stack direction={"row"} justifyContent="center" gap={2}>
-        {languages.map((lang) => (
-          <AppLink key={lang} title={lang.toUpperCase()} active={locale === lang} onClick={() => setLocale(lang)} />
-        ))}
-      </Stack>
+    <Stack direction="row" position={"relative"} p={1} px={2}>
       <AppLink
         startIcon={<PlaceOutlinedIcon />}
         title={"Vysoké nad Jizerou"}
@@ -25,6 +19,21 @@ export const Header = () => {
           window.open("https://www.google.com");
         }}
       />
+      <Stack
+        direction={"row"}
+        justifyContent="center"
+        gap={2}
+        sx={{
+          position: "absolute",
+
+          left: "50%",
+          transform: "translateX( -50%)",
+        }}
+      >
+        {languages.map((lang) => (
+          <AppLink key={lang} title={lang.toUpperCase()} active={locale === lang} onClick={() => setLocale(lang)} />
+        ))}
+      </Stack>
     </Stack>
   );
 };

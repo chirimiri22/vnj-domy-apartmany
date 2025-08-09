@@ -1,6 +1,6 @@
 import { Grid, Stack, Typography } from "@mui/material";
-import type { Apartment } from "../model/Apartment.ts";
-import { Colors } from "../theme/colors.ts";
+import type { Apartment } from "../../model/Apartment.ts";
+import { Colors } from "../../theme/colors.ts";
 
 type Props = {
   stats: Apartment;
@@ -16,7 +16,7 @@ const apartmentStats: {
   usable_area: { name: "Užitná plocha", unit: "m²" },
   totalArea: { name: "Celková plocha", unit: "m²" },
   layout: { name: "Dispozice", unit: "" },
-  number: { name: "Číslo bytu", unit: "" },
+  // number: { name: "Číslo bytu", unit: "" },
 };
 
 export const Stats = (props: Props) => {

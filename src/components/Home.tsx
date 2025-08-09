@@ -1,12 +1,10 @@
 import { Jumbotron } from "./Jumbotron.tsx";
 import { Standards } from "./Standards.tsx";
 import { Houses } from "./Houses.tsx";
-import { Footer } from "./Footer.tsx";
-import { Box, Collapse, Container, Stack, Typography } from "@mui/material";
-import { Gallery } from "./property-detail/Gallery.tsx";
+import { Collapse, Container, Stack } from "@mui/material";
+import { Gallery } from "./Gallery.tsx";
 import { PropertyList } from "./PropertyList.tsx";
 import { data } from "../constants/data.ts";
-import { Colors } from "../theme/colors.ts";
 import { AppButton } from "./AppButton.tsx";
 import { useState } from "react";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";

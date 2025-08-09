@@ -1,16 +1,15 @@
-import bedroom from "../../assets/home-gallery/bedroom.jpg";
-import flat_plan from "../../assets/home-gallery/flat_plan.jpg";
-import kitchen from "../../assets/home-gallery/kitchen.jpg";
-import living_room from "../../assets/home-gallery/living_room.jpg";
-import panorama from "../../assets/home-gallery/panorama.bmp";
-import one_house from "../../assets/home-gallery/one_house.jpg";
-import house_plan from "../../assets/home-gallery/house_plan.png";
+import bedroom from "../assets/home-gallery/bedroom.jpg";
+import flat_plan from "../assets/home-gallery/flat_plan.jpg";
+import kitchen from "../assets/home-gallery/kitchen.jpg";
+import living_room from "../assets/home-gallery/living_room.jpg";
+import panorama from "../assets/home-gallery/panorama.bmp";
+import one_house from "../assets/home-gallery/one_house.jpg";
+import house_plan from "../assets/home-gallery/house_plan.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { GlobalStyles, Stack } from "@mui/material";
 import { Navigation } from "swiper/modules";
-import { Colors } from "../../theme/colors.ts";
-
-const isMobile = window.innerWidth <= 768; // Adjust this value based on your mobile breakpoint
+import { Colors } from "../theme/colors.ts";
+import { isMobile } from "../App.tsx";
 
 export const Gallery = () => {
   const images = [living_room, bedroom, kitchen, panorama, one_house];
@@ -51,7 +50,7 @@ export const Gallery = () => {
           <SwiperSlide
             key={i}
             style={
-              window.innerWidth <= 768
+              isMobile
                 ? { width: "100vw", maxWidth: "100vw", height: "auto", aspectRatio: "4 / 3", overflow: "hidden" }
                 : { width: "100%", height: "100vh", overflow: "hidden" }
             }
@@ -60,7 +59,7 @@ export const Gallery = () => {
               src={image}
               alt={`Gallery image ${i + 1}`}
               style={
-                window.innerWidth <= 768
+                isMobile
                   ? { width: "100%", height: "100%", objectFit: "cover", aspectRatio: "4 / 3", maxWidth: "100vw" }
                   : { height: "auto", width: "100%" }
               }
