@@ -1,7 +1,7 @@
 import { Container, Grid, Stack, Typography } from "@mui/material";
 import { Colors } from "../theme/colors.ts";
 
-interface StandardItem {
+type StandardItem = {
   category: string;
   description: string;
 }
