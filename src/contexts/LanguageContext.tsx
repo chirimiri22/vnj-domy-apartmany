@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
+import React, { createContext, useContext, useState, type ReactNode, useEffect } from "react";
 import { translations, type Language } from '../translations';
 
 type LanguageContextType = {
@@ -40,7 +40,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
   const t = (key: string): string => {
     const keys = key.split('.');
     let value: any = translations[language];
-    
+
     for (const k of keys) {
       if (value && typeof value === 'object' && k in value) {
         value = value[k];
@@ -49,7 +49,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
         return key;
       }
     }
-    
+
     return typeof value === 'string' ? value : key;
   };
 

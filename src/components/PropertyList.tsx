@@ -1,7 +1,7 @@
-import { Container, Stack, Typography } from "@mui/material";
-import { DataGridPremium, type GridColDef, type GridRowSelectionModel, useGridApiRef } from "@mui/x-data-grid-premium";
+import {  Stack,  } from "@mui/material";
+import { DataGridPremium, type GridColDef, useGridApiRef } from "@mui/x-data-grid-premium";
 import type { Apartment } from "../model/Apartment.ts";
-import { useEffect, useState } from "react";
+import { useEffect, } from "react";
 import { useLanguage } from "../contexts/LanguageContext";
 
 type Props = {
@@ -28,9 +28,9 @@ export const PropertyList = ({ apartments, onClickProperty, selectedApartmentId 
     { field: "storage", headerName: t("propertyList.columns.storage"), width: 95 },
     { field: "garage", headerName: t("propertyList.columns.garage"), width: 75 },
     { field: "price", headerName: t("propertyList.columns.price"), width: 120 },
-    { 
-      field: "status", 
-      headerName: t("propertyList.columns.status"), 
+    {
+      field: "status",
+      headerName: t("propertyList.columns.status"),
       width: 120,
       renderCell: (params) => {
         const statusKey = params.value as string;
@@ -44,7 +44,7 @@ export const PropertyList = ({ apartments, onClickProperty, selectedApartmentId 
       apiRef?.current?.selectRow(selectedApartmentId, true); // highlight row
     }
   }, [selectedApartmentId, apartments, apiRef]);
-  
+
   return (
     <Stack pb={6}>
       <DataGridPremium

@@ -13,9 +13,9 @@ import { useNavigate } from "react-router";
 import { base } from "../constants/constants.ts";
 import { useLanguage } from "../contexts/LanguageContext";
 
-type Props = {
-  onSelectedHouse: (house: HouseDetail) => void;
-};
+// type Props = {
+//   onSelectedHouse: (house: HouseDetail) => void;
+// };
 
 const isMobile = window.innerWidth <= 768; // Adjust this value based on your mobile breakpoint
 

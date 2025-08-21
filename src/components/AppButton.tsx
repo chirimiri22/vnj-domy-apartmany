@@ -1,5 +1,5 @@
 import { type ReactNode } from "react";
-import { Button, Icon, Typography } from "@mui/material";
+import { Button } from "@mui/material";
 
 type Props = {
   onClick: () => void;
