@@ -16,10 +16,12 @@ import { useScrollToTopOnLoad } from "../../hook/useScrollToTopOnLoad.ts";
 import type { Apartment } from "../../model/Apartment.ts";
 import { Colors } from "../../theme/colors.ts";
 import { ContactCard } from "./ContactCard.tsx";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 export const PropertyDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const { t } = useLanguage();
 
   useScrollToTopOnLoad([id]);
 
@@ -42,8 +44,9 @@ export const PropertyDetail = () => {
   };
 
   if (!id || !house) {
-    return "Property not found";
+    return t("propertyDetail.propertyNotFound");
   }
+  
   return (
     <Stack>
       <TitleSection house={house} image={visualisation} />
@@ -63,7 +66,7 @@ export const PropertyDetail = () => {
                       {apartment.number}
                     </Typography>
                     <Typography variant="body2" fontWeight={500} color={Colors.secondary}>
-                      Číslo bytu
+                      {t("propertyDetail.apartmentNumber")}
                     </Typography>
                   </Stack>
                 </Grid>
@@ -73,7 +76,7 @@ export const PropertyDetail = () => {
                       {apartment.price} Kč
                     </Typography>
                     <Typography variant="body2" fontWeight={500} color={Colors.secondary}>
-                      Cena
+                      {t("propertyDetail.price")}
                     </Typography>
                   </Stack>
                 </Grid>
@@ -83,12 +86,7 @@ export const PropertyDetail = () => {
             <Stack flex={2}>
               <Stats stats={apartment} />
               <Typography mt={5} mb={{ md: 8, xs: 2 }}>
-                Dům Alžběta se nachází na pozici 12×3 a nabízí klidné bydlení v moderním rodinném domě s jediným
-                prostorným bytem. Tento dům je ideální pro ty, kteří hledají soukromí, komfort a přímý kontakt s
-                přírodou. Dům vyniká promyšlenou architekturou a vysokým standardem vybavení. Byt RD1B1 má dispozici
-                3+kk a nabízí užitnou plochu 97,74 m², přičemž celková plocha včetně příslušenství činí 103,67 m². K
-                bytu náleží prostorná zahrada o velikosti 171,33 m², balkon o ploše 9 m², sklep o velikosti 9,35 m² a
-                jedno garážové stání. Tento byt byl již prodán.
+                {t("propertyDetail.houseDescription")}
               </Typography>
             </Stack>
             <ContactCard {...contact} sx={{ mb: 4, display: { xs: "flex", md: "none" } }} />
@@ -97,10 +95,10 @@ export const PropertyDetail = () => {
       </Container>
 
       <Gallery />
-      <Houses title={"Ostatní domy"} />
+      <Houses title={t("navigation.otherHouses")} />
       <Stack alignItems={"center"}>
         <Button variant={"outlined"} size={"large"} onClick={() => navigate(`/${base}`)} startIcon={<ArrowBackIcon />}>
-          Zpět
+          {t("common.back")}
         </Button>
       </Stack>
     </Stack>

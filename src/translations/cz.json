@@ -1,0 +1,111 @@
+{
+  "common": {
+    "back": "Zpět",
+    "clear": "Vymazat",
+    "submit": "Odeslat",
+    "delete": "Smazat",
+    "name": "Jméno",
+    "age": "Věk",
+    "summary": "Souhrn",
+    "send": "Odeslat",
+    "showAllApartments": "Seznam všech bytů",
+    "available": "volné",
+    "of": "z",
+    "reserved": "rezervováno",
+    "sold": "prodáno"
+  },
+  "navigation": {
+    "vysokeNadJizerou": "Vysoké nad Jizerou",
+    "otherHouses": "Ostatní domy"
+  },
+  "header": {
+    "languages": {
+      "en": "EN",
+      "cz": "CZ"
+    }
+  },
+  "jumbotron": {
+    "mainTitle": "Bydlete v dokonalém luxusu",
+    "live": "Bydlete",
+    "perfect": "dokonalém",
+    "luxury": "luxusu",
+    "in": "v"
+  },
+  "standards": {
+    "title": "Standardy bytů",
+    "description": "Ve Vysokém nad Jizerou právě vzniká exkluzivní projekt výstavby pěti nových luxusních rodinných domů, které spojují výhody moderního bydlení s klidem a krásou horské krajiny. Každý z domů je navržen s důrazem na pohodlí a funkčnost – nabízí moderní architekturu v harmonii s okolní přírodou, prostorné dispozice ideální pro rodiny s dětmi a vysoký standard provedení, který splní i ty nejnáročnější požadavky. Samozřejmostí jsou kvalitní materiály, dostatek úložného prostoru a promyšlené detaily, které oceníte v každodenním životě. Domy se nacházejí v klidné části města, takže poskytují dostatek soukromí a prostoru pro odpočinek, zároveň jsou však v docházkové vzdálenosti od školy, obchodů i služeb. Milovníci aktivního životního stylu ocení blízkost turistických a cyklistických tras i lyžařských areálů, které dělají z této lokality atraktivní místo po celý rok.",
+    "secondDescription": "Tento projekt je skvělou volbou jak pro rodiny hledající trvalé bydlení v bezpečném a inspirativním prostředí, tak pro ty, kdo chtějí investovat do rekreační nebo víkendové nemovitosti. Děti zde mohou vyrůstat v bezprostřední blízkosti přírody, učit se vztahu k okolí a trávit volný čas aktivně, zatímco rodiče ocení klid, čistý vzduch a možnost uniknout ruchu města. Výstavba je omezena na pouhých pět domů, což zajišťuje exkluzivitu a komorní atmosféru celého projektu. Pokud hledáte místo, kde se spojuje kvalita, design a příroda – Vysoké nad Jizerou může být tím pravým domovem pro vaši rodinu. Nezávazně nás kontaktujte pro více informací nebo si domluvte osobní prohlídku – o tyto domy je vysoký zájem.",
+    "categories": {
+      "foundation": "Základové konstrukce",
+      "exteriorWalls": "Obvodové nosné konstrukce",
+      "ceiling": "Konstrukce stropu",
+      "stairs": "Schodiště",
+      "roof": "Střecha",
+      "waterMeters": "Vodoměry a měření spotřeby vody",
+      "heating": "Vytápění",
+      "electrical": "Elektroinstalace",
+      "ventilation": "Vzduchotechnika",
+      "furniture": "Zařizovací předměty"
+    },
+    "descriptions": {
+      "foundation": "Standardní základové konstrukce pro zajištění stability domu.",
+      "exteriorWalls": "Robustní nosné konstrukce pro dlouhou životnost budovy.",
+      "ceiling": "Zakládorovené monostřičky pro pevné a bezpečné stropy.",
+      "stairs": "Zakládorovené profildružování pro pohodlný přístup.",
+      "roof": "Kvalitní střešní konstrukce pro ochranu před povětrnostními vlivy.",
+      "waterMeters": "Moderní systémy pro přesné měření spotřeby vody.",
+      "heating": "Efektivní vytápění pro komfortní bydlení.",
+      "electrical": "Bezpečné a moderní elektrické rozvody.",
+      "ventilation": "Systémy pro kvalitní větrání a zdravé vnitřní prostředí.",
+      "furniture": "Kvalitní vybavení koupelen a kuchyní pro váš komfort."
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 Your Company. All rights reserved."
+  },
+  "propertyList": {
+    "columns": {
+      "houseName": "Název domu",
+      "apartmentNumber": "Číslo bytu",
+      "layout": "Dispozice",
+      "usableArea": "Užitná plocha (m²)",
+      "totalArea": "Celková plocha (m²)",
+      "balcony": "Balkón (m²)",
+      "garden": "Zahrada (m²)",
+      "storage": "Sklep (m²)",
+      "garage": "Garáž",
+      "price": "Cena (Kč)",
+      "status": "Stav"
+    }
+  },
+  "propertyDetail": {
+    "propertyNotFound": "Property not found",
+    "apartmentNumber": "Číslo bytu",
+    "price": "Cena",
+    "houseDescription": "Dům Alžběta se nachází na pozici 12×3 a nabízí klidné bydlení v moderním rodinném domě s jediným prostorným bytem. Tento dům je ideální pro ty, kteří hledají soukromí, komfort a přímý kontakt s přírodou. Dům vyniká promyšlenou architekturou a vysokým standardem vybavení. Byt RD1B1 má dispozici 3+kk a nabízí užitnou plochu 97,74 m², přičemž celková plocha včetně příslušenství činí 103,67 m². K bytu náleží prostorná zahrada o velikosti 171,33 m², balkon o ploše 9 m², sklep o velikosti 9,35 m² a jedno garážové stání. Tento byt byl již prodán."
+  },
+  "stats": {
+    "balcony": "Balkon",
+    "garden": "Zahrada",
+    "storage": "Sklep",
+    "garage": "Garáž",
+    "usableArea": "Užitná plocha",
+    "totalArea": "Celková plocha",
+    "layout": "Dispozice"
+  },
+  "contact": {
+    "title": "majitel nemovitosti"
+  },
+  "houses": {
+    "alzbeta": "Dům Alžběta",
+    "barbora": "Dům Barbora",
+    "cecilie": "Dům Cecílie",
+    "dana": "Dům Dana",
+    "eliska": "Dům Eliška"
+  },
+  "apartmentStatus": {
+    "free": "Volný",
+    "inReservation": "Rezervováno",
+    "sold": "Prodáno"
+  }
+}

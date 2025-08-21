@@ -1,5 +1,5 @@
 export enum ApartmentStatus {
-  Free = "Volný",
-  InReservation = "Rezervováno",
-  Sold = "Prodáno",
+  Free = "free",
+  InReservation = "inReservation",
+  Sold = "sold",
 }

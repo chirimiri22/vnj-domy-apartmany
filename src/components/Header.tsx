@@ -1,20 +1,20 @@
 import { Stack } from "@mui/material";
 
 import { AppLink } from "./AppLink";
-import { useState } from "react";
+import { useLanguage } from "../contexts/LanguageContext";
 
 import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
 
-const languages = ["en", "cz"];
+const languages = [ "cz", "en"] as const;
 
 export const Header = () => {
-  const [locale, setLocale] = useState("en");
+  const { language, setLanguage, t } = useLanguage();
 
   return (
     <Stack direction="row" position={"relative"} p={1} px={2}>
       <AppLink
         startIcon={<PlaceOutlinedIcon />}
-        title={"Vysoké nad Jizerou"}
+        title={t("navigation.vysokeNadJizerou")}
         onClick={() => {
           window.open("https://www.google.com");
         }}
@@ -31,7 +31,12 @@ export const Header = () => {
         }}
       >
         {languages.map((lang) => (
-          <AppLink key={lang} title={lang.toUpperCase()} active={locale === lang} onClick={() => setLocale(lang)} />
+          <AppLink 
+            key={lang} 
+            title={t(`header.languages.${lang}`)} 
+            active={language === lang} 
+            onClick={() => setLanguage(lang)} 
+          />
         ))}
       </Stack>
     </Stack>

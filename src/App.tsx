@@ -8,6 +8,7 @@ import { PropertyDetail } from "./components/property-detail/PropertyDetail.tsx"
 import { Header } from "./components/Header.tsx";
 import { Home } from "./components/Home.tsx";
 import { base } from "./constants/constants.ts";
+import { LanguageProvider } from "./contexts/LanguageContext.tsx";
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -18,17 +19,19 @@ export const isMobile = window.innerWidth <= 768;
 
 function App() {
   return (
-    <BrowserRouter>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Header />
-        <Routes>
-          <Route path={base} element={<Home />} />
-          <Route path={`${base}/:id`} element={<PropertyDetail />} />
-        </Routes>
-        <Footer />
-      </ThemeProvider>
-    </BrowserRouter>
+    <LanguageProvider>
+      <BrowserRouter>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Header />
+          <Routes>
+            <Route path={base} element={<Home />} />
+            <Route path={`${base}/:id`} element={<PropertyDetail />} />
+          </Routes>
+          <Footer />
+        </ThemeProvider>
+      </BrowserRouter>
+    </LanguageProvider>
   );
 }
 
