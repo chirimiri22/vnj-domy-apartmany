@@ -11,6 +11,7 @@ import { ApartmentStatus } from "../model/ApartmentStatus.ts";
 import CircleIcon from "@mui/icons-material/Circle";
 import { useNavigate } from "react-router";
 import { base } from "../constants/constants.ts";
+import { useLanguage } from "../contexts/LanguageContext";
 
 type Props = {
   onSelectedHouse: (house: HouseDetail) => void;
@@ -30,6 +31,7 @@ const getData = (): HouseDetail[] => {
 
 export const Plan = () => {
   const navigate = useNavigate();
+  const { t } = useLanguage();
 
   const [hoveredArea, setHoveredArea] = useState<HouseDetail>();
   const [backgroundImage] = useImage(plan);
@@ -101,7 +103,7 @@ export const Plan = () => {
               </Typography>
 
               <Stack direction={"row"} gap={1}>
-                volné: {hoveredArea.apartments.filter((x) => x.status === ApartmentStatus.Free).length} z{" "}
+                {t("common.available")}: {hoveredArea.apartments.filter((x) => x.status === ApartmentStatus.Free).length} {t("common.of")}{" "}
                 {hoveredArea.apartments.length}
               </Stack>
 

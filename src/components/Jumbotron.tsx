@@ -1,9 +1,12 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { Colors } from "../theme/colors.ts";
+import { useLanguage } from "../contexts/LanguageContext";
 import video from "../assets/video.mp4";
 
 export const Jumbotron = () => {
+  const { t } = useLanguage();
   const viewportHeight = window.innerHeight;
+  
   return (
     <Stack
       sx={{
@@ -40,8 +43,8 @@ export const Jumbotron = () => {
       >
         <Container>
           <Typography variant="h1" sx={{ typography: { xs: "h2", md: "h1" } }} letterSpacing={1} textAlign={"center"}>
-            Bydlete
-            <br />v <Box sx={{ display: "inline-block", color: Colors.primary }}>dokonalém</Box> luxusu
+            {t("jumbotron.live")}
+            <br />{t("jumbotron.in")} <Box sx={{ display: "inline-block", color: Colors.primary }}>{t("jumbotron.perfect")}</Box> {t("jumbotron.luxury")}
           </Typography>
         </Container>
       </Stack>

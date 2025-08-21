@@ -22,11 +22,13 @@
     "@mui/x-data-grid-premium": "^8.5.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-hook-form": "^7.62.0",
     "react-konva": "^19.0.4",
     "react-konva-utils": "^1.1.1",
     "react-router": "^7.6.1",
     "react-router-dom": "^7.7.1",
     "swiper": "^11.2.10",
+    "use-form-hook": "^0.0.1",
     "use-image": "^1.1.4"
   },
   "devDependencies": {

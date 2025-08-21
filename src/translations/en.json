@@ -1,0 +1,111 @@
+{
+  "common": {
+    "back": "Back",
+    "clear": "Clear",
+    "submit": "Submit",
+    "delete": "Delete",
+    "name": "Name",
+    "age": "Age",
+    "summary": "Summary",
+    "send": "Send",
+    "showAllApartments": "Show all apartments",
+    "available": "free",
+    "of": "of",
+    "reserved": "reserved",
+    "sold": "sold"
+  },
+  "navigation": {
+    "vysokeNadJizerou": "Vysoké nad Jizerou",
+    "otherHouses": "Other houses"
+  },
+  "header": {
+    "languages": {
+      "en": "EN",
+      "cz": "CZ"
+    }
+  },
+  "jumbotron": {
+    "mainTitle": "Live in perfect luxury",
+    "live": "Live",
+    "perfect": "perfect",
+    "luxury": "luxury",
+    "in": "in"
+  },
+  "standards": {
+    "title": "Apartment Standards",
+    "description": "In Vysoké nad Jizerou, an exclusive project of five new luxury family homes is currently being built, combining the advantages of modern living with the peace and beauty of mountain landscape. Each house is designed with emphasis on comfort and functionality - offering modern architecture in harmony with the surrounding nature, spacious layouts ideal for families with children and high standard of workmanship that will meet even the most demanding requirements. Quality materials, plenty of storage space and thoughtful details that you will appreciate in everyday life are a matter of course. The houses are located in a quiet part of the city, so they provide enough privacy and space for relaxation, while being within walking distance of schools, shops and services. Active lifestyle enthusiasts will appreciate the proximity of hiking and cycling trails and ski resorts, making this location an attractive place year-round.",
+    "secondDescription": "This project is an excellent choice both for families looking for permanent housing in a safe and inspiring environment, and for those who want to invest in recreational or weekend property. Children can grow up in the immediate vicinity of nature, learn to relate to the environment and spend their free time actively, while parents will appreciate the peace, clean air and the opportunity to escape the hustle and bustle of the city. Construction is limited to just five houses, which ensures exclusivity and intimate atmosphere of the entire project. If you are looking for a place where quality, design and nature come together - Vysoké nad Jizerou can be the right home for your family. Contact us without obligation for more information or arrange a personal tour - there is high interest in these houses.",
+    "categories": {
+      "foundation": "Foundation Structures",
+      "exteriorWalls": "Exterior Load-bearing Structures",
+      "ceiling": "Ceiling Structures",
+      "stairs": "Stairs",
+      "roof": "Roof",
+      "waterMeters": "Water Meters and Water Consumption Measurement",
+      "heating": "Heating",
+      "electrical": "Electrical Installation",
+      "ventilation": "Ventilation Systems",
+      "furniture": "Furniture"
+    },
+    "descriptions": {
+      "foundation": "Standard foundation structures to ensure house stability.",
+      "exteriorWalls": "Robust load-bearing structures for long building life.",
+      "ceiling": "Monolithic reinforced concrete for solid and safe ceilings.",
+      "stairs": "Reinforced concrete profiling for comfortable access.",
+      "roof": "Quality roof construction for protection against weather conditions.",
+      "waterMeters": "Modern systems for accurate water consumption measurement.",
+      "heating": "Efficient heating for comfortable living.",
+      "electrical": "Safe and modern electrical wiring.",
+      "ventilation": "Systems for quality ventilation and healthy indoor environment.",
+      "furniture": "Quality bathroom and kitchen equipment for your comfort."
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 Your Company. All rights reserved."
+  },
+  "propertyList": {
+    "columns": {
+      "houseName": "House Name",
+      "apartmentNumber": "Apartment Number",
+      "layout": "Layout",
+      "usableArea": "Usable Area (m²)",
+      "totalArea": "Total Area (m²)",
+      "balcony": "Balcony (m²)",
+      "garden": "Garden (m²)",
+      "storage": "Basement (m²)",
+      "garage": "Garage",
+      "price": "Price (CZK)",
+      "status": "Status"
+    }
+  },
+  "propertyDetail": {
+    "propertyNotFound": "Property not found",
+    "apartmentNumber": "Apartment Number",
+    "price": "Price",
+    "houseDescription": "House Alžběta is located at position 12×3 and offers quiet living in a modern family house with a single spacious apartment. This house is ideal for those who seek privacy, comfort and direct contact with nature. The house stands out with thoughtful architecture and high standard of equipment. Apartment RD1B1 has a 3+kk layout and offers usable area of 97.74 m², while the total area including facilities is 103.67 m². The apartment includes a spacious garden of 171.33 m², balcony of 9 m², basement of 9.35 m² and one garage space. This apartment has already been sold."
+  },
+  "stats": {
+    "balcony": "Balcony",
+    "garden": "Garden",
+    "storage": "Basement",
+    "garage": "Garage",
+    "usableArea": "Usable Area",
+    "totalArea": "Total Area",
+    "layout": "Layout"
+  },
+  "contact": {
+    "title": "property owner"
+  },
+  "houses": {
+    "alzbeta": "House Alžběta",
+    "barbora": "House Barbora",
+    "cecilie": "House Cecílie",
+    "dana": "House Dana",
+    "eliska": "House Eliška"
+  },
+  "apartmentStatus": {
+    "free": "Free",
+    "inReservation": "Reserved",
+    "sold": "Sold"
+  }
+}
