@@ -12,7 +12,8 @@
     "available": "volné",
     "of": "z",
     "reserved": "rezervováno",
-    "sold": "prodáno"
+    "sold": "prodáno",
+    "currency": "Kč"
   },
   "navigation": {
     "vysokeNadJizerou": "Vysoké nad Jizerou",
@@ -29,7 +30,8 @@
     "live": "Bydlete",
     "perfect": "dokonalém",
     "luxury": "luxusu",
-    "in": "v"
+    "in": "v",
+    "motto": "Rodinné domy v horském stylu a moderním střihu"
   },
   "standards": {
     "title": "Standardy bytů",

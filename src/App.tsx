@@ -26,7 +26,6 @@ function App() {
       <BrowserRouter>
         <ThemeProvider theme={theme}>
           <CssBaseline />
-          <Header />
           <Routes>
             <Route path={base} element={<Home />} />
             <Route path={`${base}/:id`} element={<PropertyDetail />} />

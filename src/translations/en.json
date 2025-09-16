@@ -12,7 +12,8 @@
     "available": "free",
     "of": "of",
     "reserved": "reserved",
-    "sold": "sold"
+    "sold": "sold",
+    "currency": "CZK"
   },
   "navigation": {
     "vysokeNadJizerou": "Vysoké nad Jizerou",
@@ -29,7 +30,8 @@
     "live": "Live",
     "perfect": "perfect",
     "luxury": "luxury",
-    "in": "in"
+    "in": "in",
+    "motto": "Family houses in mountain style and modern design"
   },
   "standards": {
     "title": "Apartment Standards",

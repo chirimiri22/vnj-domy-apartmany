@@ -28,8 +28,8 @@ export const Home = () => {
     <Stack>
       <Jumbotron />
       <Houses />
-      <Container>
-        <Stack alignItems={"center"} gap={1}>
+      <Container sx={{pb: 6}} >
+        <Stack alignItems={"center"} gap={2}>
           <AppButton
             icon={showTable ? <ExpandLessIcon /> : <ExpandMoreIcon />}
             onClick={() => setShowTable((prev) => !prev)}
@@ -42,10 +42,10 @@ export const Home = () => {
         </Stack>
       </Container>
 
-      <Standards />
       <Gallery />
-      
-     
+      <Standards />
+
+
     </Stack>
   );
 };

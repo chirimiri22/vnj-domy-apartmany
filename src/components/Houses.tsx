@@ -7,7 +7,7 @@ type Props = {
 
 export const Houses = ({ title }: Props) => {
   return (
-    <Stack overflow={"hidden"}>
+    <Stack id={"houses"} overflow={"hidden"}>
       <Typography variant={"h2"}>{title}</Typography>
       <Plan />
     </Stack>

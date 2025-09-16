@@ -1,5 +1,5 @@
-import { Button, Container, Grid, Stack, Typography } from "@mui/material";
-import { useNavigate, useParams } from "react-router";
+import { Container, Grid, Stack, Typography } from "@mui/material";
+import { useParams } from "react-router";
 import { data } from "../../constants/data.ts";
 import { useEffect, useState } from "react";
 
@@ -9,8 +9,7 @@ import { Gallery } from "../Gallery.tsx";
 import { Stats } from "./Stats.tsx";
 import { Houses } from "../Houses.tsx";
 import { PropertyList } from "../PropertyList.tsx";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import { base, contact } from "../../constants/constants.ts";
+import { contact } from "../../constants/constants.ts";
 import { apartmentToCol } from "../../utils/apartmentToCol.ts";
 import { useScrollToTopOnLoad } from "../../hook/useScrollToTopOnLoad.ts";
 import type { Apartment } from "../../model/Apartment.ts";
@@ -20,8 +19,16 @@ import { useLanguage } from "../../contexts/LanguageContext";
 
 export const PropertyDetail = () => {
   const { id } = useParams();
-  const navigate = useNavigate();
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+
+  const getLanguageForLocale = () => {
+    switch (language) {
+      case "en":
+        return "en-US";
+      case "cz":
+        return "cs-CZ";
+    }
+  };
 
   useScrollToTopOnLoad([id]);
 
@@ -46,18 +53,19 @@ export const PropertyDetail = () => {
   if (!id || !house) {
     return t("propertyDetail.propertyNotFound");
   }
-  
+
   return (
     <Stack>
-      <TitleSection house={house} image={visualisation} />
       <Container>
+        <TitleSection house={house} image={visualisation} />
+
         <PropertyList
           apartments={house.apartments.map((ap) => apartmentToCol(ap, house))}
           onClickProperty={handleApartmentClick}
           selectedApartmentId={apartment?.id}
         />
         {apartment && (
-          <Stack direction={{ xs: "column", md: "row" }} gap={2}>
+          <Stack direction={{ xs: "column", md: "row" }} gap={10} py={6}>
             <Stack flex={1}>
               <Grid container spacing={1}>
                 <Grid size={{ xs: 6, md: 12 }}>
@@ -73,7 +81,7 @@ export const PropertyDetail = () => {
                 <Grid size={{ xs: 6, md: 12 }}>
                   <Stack>
                     <Typography variant="h4" fontWeight={600} sx={{ color: Colors.primary }}>
-                      {apartment.price} Kč
+                      {apartment.price.toLocaleString(getLanguageForLocale())} {t("common.currency")}
                     </Typography>
                     <Typography variant="body2" fontWeight={500} color={Colors.secondary}>
                       {t("propertyDetail.price")}
@@ -96,11 +104,6 @@ export const PropertyDetail = () => {
 
       <Gallery />
       <Houses title={t("navigation.otherHouses")} />
-      <Stack alignItems={"center"}>
-        <Button variant={"outlined"} size={"large"} onClick={() => navigate(`/${base}`)} startIcon={<ArrowBackIcon />}>
-          {t("common.back")}
-        </Button>
-      </Stack>
     </Stack>
   );
 };

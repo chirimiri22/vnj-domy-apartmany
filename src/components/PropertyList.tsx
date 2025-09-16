@@ -1,7 +1,7 @@
-import {  Stack,  } from "@mui/material";
+import { Stack } from "@mui/material";
 import { DataGridPremium, type GridColDef, useGridApiRef } from "@mui/x-data-grid-premium";
 import type { Apartment } from "../model/Apartment.ts";
-import { useEffect, } from "react";
+import { useEffect } from "react";
 import { useLanguage } from "../contexts/LanguageContext";
 
 type Props = {
@@ -35,7 +35,7 @@ export const PropertyList = ({ apartments, onClickProperty, selectedApartmentId 
       renderCell: (params) => {
         const statusKey = params.value as string;
         return t(`apartmentStatus.${statusKey}`);
-      }
+      },
     },
   ];
 
@@ -46,7 +46,7 @@ export const PropertyList = ({ apartments, onClickProperty, selectedApartmentId 
   }, [selectedApartmentId, apartments, apiRef]);
 
   return (
-    <Stack pb={6}>
+    <Stack >
       <DataGridPremium
         apiRef={apiRef}
         rows={apartments}
@@ -55,6 +55,17 @@ export const PropertyList = ({ apartments, onClickProperty, selectedApartmentId 
           onClickProperty?.(params.row.houseId, params.row.id);
         }}
         hideFooter
+        sx={{
+          "& .MuiDataGrid-row:hover": {
+            cursor: "pointer",
+          },
+          "& .MuiDataGrid-cell:focus, & .MuiDataGrid-cell:focus-within": {
+            outline: "none",
+          },
+          "& .MuiDataGrid-columnHeader:focus, & .MuiDataGrid-columnHeader:focus-within": {
+            outline: "none",
+          },
+        }}
       />
     </Stack>
   );
