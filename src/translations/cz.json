@@ -32,15 +32,51 @@
     "motto": "Váš nový domov v srdci přírody"
   },
   "standards": {
-    "title": "Standardy bytů",
+    "title": "Standardní provedení",
+    "columns": {
+      "category": "Kategorie",
+      "description": "Popis"
+    },
+    "paragraphs": {
+      "freedom": {
+        "title": "Svoboda a volnost v malebné přírodě",
+        "paragraph": "Představte si místo, kde se každý den probouzíte obklopeni dechberoucími výhledy na kopce Jizerských hor a Krkonoš. Místo, kde cítíte svobodu a volnost, daleko od hlučných všedních dní. Rodinné domy na pomezí těchto nádherných hor vám nabízejí možnost začít nový život v prostředí, které je synonymem pohody a romantiky."
+      },
+      "familySpace": {
+        "title": "Prostor pro rodinu i aktivní život",
+        "paragraph": "Rodinné domy jsou navrženy tak, aby poskytovaly dostatek prostoru pro vás i vaše nejbližší. V prostorných interiérech najdete klid pro relaxaci, zatímco nádherně upravené zahrady jsou ideálním místem pro radost vašich dětí. Ševelící vítr v korunách stromů a vůně rozkvetlých luk vás budou doprovázet při každém kroku."
+      },
+      "activeLife": {
+        "title": "Aktivní pohyb na dosah",
+        "paragraph": "Milovníci aktivního pohybu si zde přijdou na své. V zimě vás potěší možnost běžeckého i sjezdového lyžování na nedalekých trasách a svazích. V létě jsou tu nekonečné možnosti pro turistiku a cyklistiku – od nenáročných rodinných tras až po náročnější výlety pro zkušené sportovce. Okolí je rájem pro každého, kdo hledá pohyb v harmonii s přírodou."
+      },
+      "quietLife": {
+        "title": "Daleko od hlučných všedních dní",
+        "paragraph": "Toto jedinečné místo je ideální pro ty, kdo touží po klidu a úniku od ruchu městského života. Život na pomezí Jizerských hor a Krkonoš nabízí dokonalou kombinaci přírodní krásy, pohodlí moderního bydlení a nekonečných možností pro relaxaci i aktivní trávení volného času."
+      },
+      "newHome": {
+        "title": "Váš nový domov právě zde",
+        "paragraph": "Rodinné domy na pomezí Jizerských hor a Krkonoš jsou víc než jen nemovitost – jsou to klíče k novému životnímu stylu plnému svobody, radosti a pohody. Probuďte se každé ráno s pocitem, že jste na správném místě, kde příroda a architektura tvoří dokonalou harmonii.\nZavolejte nám ještě dnes a začněte psát novou kapitolu svého života v jednom z nejkrásnějších koutů České republiky!\n"
+      }
+    },
     "description": "Ve Vysokém nad Jizerou právě vzniká exkluzivní projekt výstavby pěti nových luxusních rodinných domů, které spojují výhody moderního bydlení s klidem a krásou horské krajiny. Každý z domů je navržen s důrazem na pohodlí a funkčnost – nabízí moderní architekturu v harmonii s okolní přírodou, prostorné dispozice ideální pro rodiny s dětmi a vysoký standard provedení, který splní i ty nejnáročnější požadavky. Samozřejmostí jsou kvalitní materiály, dostatek úložného prostoru a promyšlené detaily, které oceníte v každodenním životě. Domy se nacházejí v klidné části města, takže poskytují dostatek soukromí a prostoru pro odpočinek, zároveň jsou však v docházkové vzdálenosti od školy, obchodů i služeb. Milovníci aktivního životního stylu ocení blízkost turistických a cyklistických tras i lyžařských areálů, které dělají z této lokality atraktivní místo po celý rok.",
     "secondDescription": "Tento projekt je skvělou volbou jak pro rodiny hledající trvalé bydlení v bezpečném a inspirativním prostředí, tak pro ty, kdo chtějí investovat do rekreační nebo víkendové nemovitosti. Děti zde mohou vyrůstat v bezprostřední blízkosti přírody, učit se vztahu k okolí a trávit volný čas aktivně, zatímco rodiče ocení klid, čistý vzduch a možnost uniknout ruchu města. Výstavba je omezena na pouhých pět domů, což zajišťuje exkluzivitu a komorní atmosféru celého projektu. Pokud hledáte místo, kde se spojuje kvalita, design a příroda – Vysoké nad Jizerou může být tím pravým domovem pro vaši rodinu. Nezávazně nás kontaktujte pro více informací nebo si domluvte osobní prohlídku – o tyto domy je vysoký zájem.",
     "categories": {
       "foundation": "Základové konstrukce",
       "exteriorWalls": "Obvodové nosné konstrukce",
-      "ceiling": "Konstrukce stropu",
+      "ceiling": "Konstrukce stropů",
       "stairs": "Schodiště",
       "roof": "Střecha",
+      "partitions": "Příčky",
+      "interiorPlaster": "Omítky vnitřní",
+      "facades": "Fasády",
+      "openings": "Výplně otvorů",
+      "sheetMetal": "Klempířské prvky",
+      "floors": "Podlahy",
+      "tiles": "Dlažby",
+      "laminateFloors": "Laminátové podlahy",
+      "pavedAreas": "Zpevněné plochy",
+      "fencing": "Oplocení",
       "waterMeters": "Vodoměry a měření spotřeby vody",
       "heating": "Vytápění",
       "electrical": "Elektroinstalace",
@@ -53,10 +89,20 @@
       "ceiling": "Zakládorovené monostřičky pro pevné a bezpečné stropy.",
       "stairs": "Zakládorovené profildružování pro pohodlný přístup.",
       "roof": "Kvalitní střešní konstrukce pro ochranu před povětrnostními vlivy.",
-      "waterMeters": "Moderní systémy pro přesné měření spotřeby vody.",
-      "heating": "Efektivní vytápění pro komfortní bydlení.",
-      "electrical": "Bezpečné a moderní elektrické rozvody.",
-      "ventilation": "Systémy pro kvalitní větrání a zdravé vnitřní prostředí.",
+      "partitions": "Keramické bloky tl. 115 mm.",
+      "interiorPlaster": "Strojní vápenosádrové, jednovrstvé, barva bílá.",
+      "facades": "Zateplení ETICS kvalitativní tř. A, z EPS (v místech daných PBŘ z minerální vlny) tl. 200 mm, silikonová zrnitá omítka.",
+      "openings": "Okna a balkónové dveře – plastové profily 82 mm, izolační trojsklo, barva antracit/bílá. Vstupní dveře – hliníkové, izolační trojsklo, barva antracit.",
+      "sheetMetal": "Lakovaný plech.",
+      "floors": "Betonová podlaha strojně hlazená s nášlapem dle standardů.",
+      "tiles": "S dlažbou je počítáno v koupelnách s WC, v samostatných WC a samostatných koupelnách.",
+      "laminateFloors": "S plovoucími lamino podlahami je počítáno v předsíni bytu, obytných místnostech a obývacím pokoji včetně kuchyňského koutu.",
+      "pavedAreas": "Parkovací stání – zatravňovací/vsakovací dlažba. Chodník – betonové tvarovky tl. 60 mm. Terasa – terasová dlažba přírodní hladká 400x400 mm.",
+      "fencing": "Plotový panel 2D výšky 1230 mm, barva antracit.",
+      "waterMeters": "Každý byt má vlastní vodoměr.",
+      "heating": "Zdrojem tepla pro vytápění a ohřev teplé vody budou sloužit kotle na zemní plyn umístěné ve společné kotelně. V bytech budou umístěna ocelová otopná tělesa, v koupelnách doplněná topnými žebříky.",
+      "electrical": "Elektrorozvody jsou ukončeny kabelovým vývodem. Svítidla nejsou součástí standardní dodávky. V obývacím pokoji je 1 datová zásuvka pro příjem internetu a TV. Rozmístění zásuvek a vypínačů je předmětem projektové dokumentace, vyjma kuchyňského koutu, kde budou všechny rozvody ukončeny nad podlahou u bytového jádra. Elektroměry jsou umístěny v elektroměrovém pilířku v chodbě.",
+      "ventilation": "WC a koupelny budou odvětrány ventilátory s doběhem, které budou umístěny v horní části obestavby instalačních šachet a budou osazeny 300 mm pod úrovní podhledu. Pro kuchyňské digestoře bude připraveno vyústění vzduchotechniky pod stropem (zakrytí potrubí od digestoře není součástí standardu).",
       "furniture": "Kvalitní vybavení koupelen a kuchyní pro váš komfort."
     }
   },

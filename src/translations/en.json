@@ -9,15 +9,15 @@
     "summary": "Summary",
     "send": "Send",
     "showAllApartments": "Show all apartments",
-    "available": "free",
+    "available": "Available",
     "of": "of",
-    "reserved": "reserved",
-    "sold": "sold",
+    "reserved": "Reserved",
+    "sold": "Sold",
     "currency": "CZK"
   },
   "navigation": {
     "vysokeNadJizerou": "Vysoké nad Jizerou",
-    "otherHouses": "Other houses"
+    "otherHouses": "Other Houses"
   },
   "header": {
     "languages": {
@@ -26,38 +26,84 @@
     }
   },
   "jumbotron": {
-    "mainTitle": "Family living on the border of the Jizera Mountains and Krkonoše",
+    "mainTitle": "Family Living on the Border of the Jizera Mountains and Krkonoše",
     "firstPart": "Family living on the border of",
-    "secondPart": " the Jizera Mountains and Krkonoše",
+    "secondPart": "the Jizera Mountains and Krkonoše",
     "motto": "Your new home in the heart of nature"
   },
   "standards": {
-    "title": "Apartment Standards",
-    "description": "In Vysoké nad Jizerou, an exclusive project of five new luxury family homes is currently being built, combining the advantages of modern living with the peace and beauty of mountain landscape. Each house is designed with emphasis on comfort and functionality - offering modern architecture in harmony with the surrounding nature, spacious layouts ideal for families with children and high standard of workmanship that will meet even the most demanding requirements. Quality materials, plenty of storage space and thoughtful details that you will appreciate in everyday life are a matter of course. The houses are located in a quiet part of the city, so they provide enough privacy and space for relaxation, while being within walking distance of schools, shops and services. Active lifestyle enthusiasts will appreciate the proximity of hiking and cycling trails and ski resorts, making this location an attractive place year-round.",
-    "secondDescription": "This project is an excellent choice both for families looking for permanent housing in a safe and inspiring environment, and for those who want to invest in recreational or weekend property. Children can grow up in the immediate vicinity of nature, learn to relate to the environment and spend their free time actively, while parents will appreciate the peace, clean air and the opportunity to escape the hustle and bustle of the city. Construction is limited to just five houses, which ensures exclusivity and intimate atmosphere of the entire project. If you are looking for a place where quality, design and nature come together - Vysoké nad Jizerou can be the right home for your family. Contact us without obligation for more information or arrange a personal tour - there is high interest in these houses.",
+    "title": "Standard Specifications",
+    "columns": {
+      "category": "Category",
+      "description": "Description"
+    },
+    "paragraphs": {
+      "freedom": {
+        "title": "Freedom and Tranquility in Picturesque Nature",
+        "paragraph": "Imagine waking up every day surrounded by breathtaking views of the Jizera and Krkonoše Mountains. A place where you feel free and unbound, far from the noise of everyday life. Family houses on the border of these beautiful mountains offer you the opportunity to start a new life in an environment synonymous with comfort and romance."
+      },
+      "familySpace": {
+        "title": "Space for Family and Active Living",
+        "paragraph": "The family houses are designed to provide plenty of space for you and your loved ones. Spacious interiors offer a peaceful retreat, while beautifully landscaped gardens are perfect for your children’s enjoyment. The rustling wind in the treetops and the scent of blooming meadows accompany you at every step."
+      },
+      "activeLife": {
+        "title": "Active Lifestyle Within Reach",
+        "paragraph": "Fans of active living will find plenty to do here. In winter, enjoy cross-country and downhill skiing on nearby trails and slopes. In summer, endless opportunities await for hiking and cycling—from easy family routes to challenging trips for experienced athletes. The surroundings are a paradise for anyone seeking movement in harmony with nature."
+      },
+      "quietLife": {
+        "title": "Far from the Noise of Everyday Life",
+        "paragraph": "This unique location is ideal for those seeking peace and an escape from urban hustle. Living on the border of the Jizera and Krkonoše Mountains offers the perfect combination of natural beauty, modern comfort, and endless options for both relaxation and active leisure."
+      },
+      "newHome": {
+        "title": "Your New Home Is Here",
+        "paragraph": "The family houses on the border of the Jizera and Krkonoše Mountains are more than just properties—they are the keys to a new lifestyle full of freedom, joy, and comfort. Wake up every morning with the feeling that you are in the right place, where nature and architecture create perfect harmony.\nCall us today and start writing a new chapter of your life in one of the most beautiful corners of the Czech Republic!"
+      }
+    },
+    "description": "In Vysoké nad Jizerou, an exclusive project of five new luxury family houses is under development, combining the advantages of modern living with the peace and beauty of the mountain landscape. Each house is designed with an emphasis on comfort and functionality—offering modern architecture in harmony with the surrounding nature, spacious layouts ideal for families with children, and a high standard of execution that meets the most demanding requirements. Quality materials, ample storage space, and thoughtful details for daily life are standard. The houses are located in a quiet part of the town, providing privacy and space for relaxation while being within walking distance of schools, shops, and services. Lovers of an active lifestyle will appreciate the proximity to hiking and cycling trails and ski resorts, making this location attractive year-round.",
+    "secondDescription": "This project is ideal for families seeking permanent housing in a safe and inspiring environment, as well as for those wishing to invest in a recreational or weekend property. Children can grow up close to nature, learning to appreciate their surroundings while spending their free time actively, while parents enjoy peace, fresh air, and an escape from city life. With construction limited to just five houses, the project offers exclusivity and an intimate atmosphere. If you are looking for a place where quality, design, and nature come together—Vysoké nad Jizerou could be the perfect home for your family. Contact us for more information or to schedule a personal tour—these houses are in high demand.",
     "categories": {
-      "foundation": "Foundation Structures",
-      "exteriorWalls": "Exterior Load-bearing Structures",
-      "ceiling": "Ceiling Structures",
+      "foundation": "Foundations",
+      "exteriorWalls": "Exterior Load-Bearing Walls",
+      "ceiling": "Ceilings",
       "stairs": "Stairs",
       "roof": "Roof",
-      "waterMeters": "Water Meters and Water Consumption Measurement",
+      "partitions": "Partitions",
+      "interiorPlaster": "Interior Plaster",
+      "facades": "Facades",
+      "openings": "Openings",
+      "sheetMetal": "Sheet Metal Elements",
+      "floors": "Floors",
+      "tiles": "Tiles",
+      "laminateFloors": "Laminate Flooring",
+      "pavedAreas": "Paved Areas",
+      "fencing": "Fencing",
+      "waterMeters": "Water Meters",
       "heating": "Heating",
       "electrical": "Electrical Installation",
-      "ventilation": "Ventilation Systems",
-      "furniture": "Furniture"
+      "ventilation": "Ventilation",
+      "furniture": "Furnishings"
     },
     "descriptions": {
-      "foundation": "Standard foundation structures to ensure house stability.",
-      "exteriorWalls": "Robust load-bearing structures for long building life.",
-      "ceiling": "Monolithic reinforced concrete for solid and safe ceilings.",
-      "stairs": "Reinforced concrete profiling for comfortable access.",
-      "roof": "Quality roof construction for protection against weather conditions.",
-      "waterMeters": "Modern systems for accurate water consumption measurement.",
-      "heating": "Efficient heating for comfortable living.",
-      "electrical": "Safe and modern electrical wiring.",
-      "ventilation": "Systems for quality ventilation and healthy indoor environment.",
-      "furniture": "Quality bathroom and kitchen equipment for your comfort."
+      "foundation": "Standard foundation structures ensuring the stability of the house.",
+      "exteriorWalls": "Robust load-bearing walls for long-lasting durability.",
+      "ceiling": "Reinforced concrete slabs for solid and safe ceilings.",
+      "stairs": "Reinforced concrete staircases for comfortable access.",
+      "roof": "High-quality roof construction providing protection against weather.",
+      "partitions": "Ceramic blocks, 115 mm thick.",
+      "interiorPlaster": "Machine-applied lime-gypsum plaster, single layer, white.",
+      "facades": "ETICS insulation, class A quality, EPS (mineral wool in fire safety zones), 200 mm thick, silicone textured finish.",
+      "openings": "Windows and balcony doors – plastic profiles 82 mm, triple glazing, anthracite/white. Entrance doors – aluminum, triple glazing, anthracite.",
+      "sheetMetal": "Painted sheet metal elements.",
+      "floors": "Concrete floors, machine-smoothed with standard surface finish.",
+      "tiles": "Tiles in bathrooms with WC, separate WCs, and separate bathrooms.",
+      "laminateFloors": "Floating laminate floors in hallways, living areas, and kitchen corners.",
+      "pavedAreas": "Parking – grass/permeable paving. Sidewalk – 60 mm concrete blocks. Terrace – natural smooth 400x400 mm tiles.",
+      "fencing": "2D fence panels, 1230 mm high, anthracite.",
+      "waterMeters": "Each apartment has its own water meter.",
+      "heating": "Heating and hot water are provided by natural gas boilers in a shared boiler room. Apartments have steel radiators, with towel warmers in bathrooms.",
+      "electrical": "Electrical outlets provided; fixtures not included. One data socket for internet/TV in the living room. Socket/switch layout follows project documentation, except kitchen area where all wiring ends above the floor near the apartment core. Meters are in the corridor cabinet.",
+      "ventilation": "Bathrooms and toilets ventilated by delayed fans, located at the top of installation shafts, 300 mm below ceiling. Kitchen hood ducts prepared under ceiling (covering not included).",
+      "furniture": "High-quality bathroom and kitchen furnishings for your comfort."
     }
   },
   "footer": {
@@ -82,7 +128,7 @@
     "propertyNotFound": "Property not found",
     "apartmentNumber": "Apartment Number",
     "price": "Price",
-    "houseDescription": "House Alžběta is located at position 12×3 and offers quiet living in a modern family house with a single spacious apartment. This house is ideal for those who seek privacy, comfort and direct contact with nature. The house stands out with thoughtful architecture and high standard of equipment. Apartment RD1B1 has a 3+kk layout and offers usable area of 97.74 m², while the total area including facilities is 103.67 m². The apartment includes a spacious garden of 171.33 m², balcony of 9 m², basement of 9.35 m² and one garage space. This apartment has already been sold."
+    "houseDescription": "House Alžběta is located at position 12×3 and offers quiet living in a modern family house with a single spacious apartment. Ideal for those seeking privacy, comfort, and direct contact with nature. The house features thoughtful architecture and high-standard equipment. Apartment RD1B1 has a 3+kk layout with 97.74 m² of usable area and 103.67 m² total area including facilities. It includes a 171.33 m² garden, 9 m² balcony, 9.35 m² basement, and one garage space. This apartment has already been sold."
   },
   "stats": {
     "balcony": "Balcony",
@@ -94,7 +140,7 @@
     "layout": "Layout"
   },
   "contact": {
-    "title": "property owner"
+    "title": "Property Owner"
   },
   "houses": {
     "alzbeta": "House Alžběta",
@@ -104,7 +150,7 @@
     "eliska": "House Eliška"
   },
   "apartmentStatus": {
-    "free": "Free",
+    "free": "Available",
     "inReservation": "Reserved",
     "sold": "Sold"
   }
