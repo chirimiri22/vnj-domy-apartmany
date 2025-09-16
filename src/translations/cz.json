@@ -26,12 +26,10 @@
     }
   },
   "jumbotron": {
-    "mainTitle": "Bydlete v dokonalém luxusu",
-    "live": "Bydlete",
-    "perfect": "dokonalém",
-    "luxury": "luxusu",
-    "in": "v",
-    "motto": "Rodinné domy v horském stylu a moderním střihu"
+    "mainTitle": "Rodinné bydlení na pomezí Jizerských hor a Krkonoš",
+    "firstPart": "Rodinné bydlení na pomezí",
+    "secondPart": "Jizerských hor a Krkonoš",
+    "motto": "Váš nový domov v srdci přírody"
   },
   "standards": {
     "title": "Standardy bytů",

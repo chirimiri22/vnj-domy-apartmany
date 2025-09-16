@@ -26,12 +26,10 @@
     }
   },
   "jumbotron": {
-    "mainTitle": "Live in perfect luxury",
-    "live": "Live",
-    "perfect": "perfect",
-    "luxury": "luxury",
-    "in": "in",
-    "motto": "Family houses in mountain style and modern design"
+    "mainTitle": "Family living on the border of the Jizera Mountains and Krkonoše",
+    "firstPart": "Family living on the border of",
+    "secondPart": " the Jizera Mountains and Krkonoše",
+    "motto": "Your new home in the heart of nature"
   },
   "standards": {
     "title": "Apartment Standards",

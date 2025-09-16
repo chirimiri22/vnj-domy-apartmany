@@ -49,11 +49,9 @@ export const Jumbotron = () => {
       >
         <Container>
           <Typography variant="h1" sx={{ typography: { xs: "h2", md: "h1" } }} letterSpacing={1} textAlign={"center"}>
-            {t("jumbotron.live")}
+            {t("jumbotron.firstPart")}
             <br />
-            {t("jumbotron.in")}{" "}
-            <Box sx={{ display: "inline-block", color: Colors.primary }}>{t("jumbotron.perfect")}</Box>{" "}
-            {t("jumbotron.luxury")}
+            <Box sx={{ display: "inline-block", color: Colors.primary }}>{t("jumbotron.secondPart")}</Box>
           </Typography>
 
           <Stack direction={"row"} justifyContent={"center"} alignItems={"center"} gap={2}>
