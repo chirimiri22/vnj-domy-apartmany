@@ -9,7 +9,7 @@ type Props = {
 
 export const Stats = (props: Props) => {
   const { t } = useLanguage();
-  
+
   const apartmentStats: {
     [K in keyof Apartment]?: { name: string; unit: string };
   } = {
@@ -24,7 +24,7 @@ export const Stats = (props: Props) => {
   };
 
   return (
-    <Grid container spacing={1}>
+    <Grid container spacing={3}>
       {Object.keys(props.stats)
         .filter((s) => s in apartmentStats)
         .map((stat: string) => {

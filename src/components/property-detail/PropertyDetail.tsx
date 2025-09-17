@@ -67,7 +67,7 @@ export const PropertyDetail = () => {
         {apartment && (
           <Stack direction={{ xs: "column", md: "row" }} gap={10} py={6}>
             <Stack flex={1}>
-              <Grid container spacing={1}>
+              <Grid container spacing={3}>
                 <Grid size={{ xs: 6, md: 12 }}>
                   <Stack>
                     <Typography variant="h4" fontWeight={600} sx={{ color: Colors.primary }}>

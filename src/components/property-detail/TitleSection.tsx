@@ -40,9 +40,6 @@ export const TitleSection = ({ house, image }: Props) => {
       />
 
       <Stack direction={"row"} alignContent={"end"} gap={5}>
-        <Typography variant={"h2"} letterSpacing={1} color={Colors.primary} mb={0}>
-          {house.name}
-        </Typography>
         <Stack justifyContent={"end"}>
           <Button
             variant={"outlined"}
@@ -54,6 +51,9 @@ export const TitleSection = ({ house, image }: Props) => {
             {t("common.back")}
           </Button>
         </Stack>
+        <Typography variant={"h2"} letterSpacing={1} color={Colors.primary} mb={0}>
+          {house.name}
+        </Typography>
       </Stack>
     </Stack>
   );
