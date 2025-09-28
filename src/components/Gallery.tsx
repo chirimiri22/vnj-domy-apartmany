@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { GlobalStyles, Stack } from "@mui/material";
 import { Navigation } from "swiper/modules";
 import { Colors } from "../theme/colors.ts";
-import { isMobile } from "../App.tsx";
+// import { isMobile } from "../App.tsx";
 import { HouseType } from "../constants/HouseTypes.ts";
 import { AppButton } from "./AppButton.tsx";
 import { useEffect, useRef } from "react";
@@ -84,28 +84,28 @@ export const Gallery = ({ houseType, showButtons, apartmentNumber }: Props) => {
           }}
         />
         <Swiper navigation={true} modules={[Navigation]} spaceBetween={0} slidesPerView={1} loop={true} ref={swiperRef}>
-          {images.map((image, i) => (
-            <SwiperSlide
-              key={i}
-              style={
-                isMobile
-                  ? { width: "100vw", maxWidth: "100vw", height: "auto", aspectRatio: "4 / 3", overflow: "hidden" }
-                  : { width: "100%", height: "100vh", overflow: "hidden" }
-              }
-            >
-              <img
-                src={image}
-                alt={`Gallery image ${i + 1}`}
-                style={
-                  isMobile
-                    ? { width: "100%", height: "100%", objectFit: "cover", aspectRatio: "4 / 3", maxWidth: "100vw" }
-                    : { height: "auto", width: "100%" }
-                }
-              />
-            </SwiperSlide>
-          ))}
+          {/*{images.map((image, i) => (*/}
+          {/*  <SwiperSlide*/}
+          {/*    key={i}*/}
+          {/*    style={*/}
+          {/*      isMobile*/}
+          {/*        ? { width: "100vw", maxWidth: "100vw", height: "auto", aspectRatio: "4 / 3", overflow: "hidden" }*/}
+          {/*        : { width: "100%", height: "100vh", overflow: "hidden" }*/}
+          {/*    }*/}
+          {/*  >*/}
+          {/*    <img*/}
+          {/*      src={image}*/}
+          {/*      alt={`Gallery image ${i + 1}`}*/}
+          {/*      style={*/}
+          {/*        isMobile*/}
+          {/*          ? { width: "100%", height: "100%", objectFit: "cover", aspectRatio: "4 / 3", maxWidth: "100vw" }*/}
+          {/*          : { height: "auto", width: "100%" }*/}
+          {/*      }*/}
+          {/*    />*/}
+          {/*  </SwiperSlide>*/}
+          {/*))}*/}
 
-          {plans.map((plan, i) => (
+          {[...images, ...plans].map((plan, i) => (
             <SwiperSlide
               key={i}
               style={
