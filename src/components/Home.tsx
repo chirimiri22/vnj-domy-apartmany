@@ -15,6 +15,7 @@ import { apartmentToCol } from "../utils/apartmentToCol.ts";
 import { useScrollToTopOnLoad } from "../hook/useScrollToTopOnLoad.ts";
 import { useLanguage } from "../contexts/LanguageContext";
 import { AnimatedOnScroll } from "./AnimateOnScroll.tsx";
+import { HouseType } from "../constants/HouseTypes.ts";
 
 export const Home = () => {
   const { t } = useLanguage();
@@ -29,7 +30,7 @@ export const Home = () => {
     <Stack>
       <Jumbotron />
       <Houses />
-      <Container sx={{pb: 6}} >
+      <Container sx={{ pb: 6 }}>
         <Stack alignItems={"center"} gap={2}>
           <AnimatedOnScroll>
             <AppButton
@@ -45,10 +46,8 @@ export const Home = () => {
         </Stack>
       </Container>
 
-      <Gallery />
+      <Gallery houseType={HouseType.A} apartmentNumber={"1"} />
       <Standards />
-
-
     </Stack>
   );
 };

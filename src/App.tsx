@@ -13,7 +13,6 @@ import "swiper/css";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
 import "swiper/css/navigation";
-import { getImagePaths } from "./utils/getImagePaths.ts";
 
 const theme = createTheme(themeOptions);
 LicenseInfo.setLicenseKey(import.meta.env.REACT_APP_MUI_LICENCE_KEY ?? "");
