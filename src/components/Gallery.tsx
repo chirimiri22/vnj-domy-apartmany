@@ -2,9 +2,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { GlobalStyles, Stack } from "@mui/material";
 import { Navigation } from "swiper/modules";
 import { Colors } from "../theme/colors.ts";
-import { isMobile } from "../App.tsx";
+import App, { isMobile } from "../App.tsx";
 import { HouseType } from "../constants/HouseTypes.ts";
 import { getImagePathsA, getImagePathsB, getImagePathsHome } from "../utils/getImagePaths.ts";
+import { AppButton } from "./AppButton.tsx";
 
 type Props = {
   houseType?: HouseType;
@@ -24,86 +25,91 @@ const getGalleryPicures = (houseType?: HouseType) => {
 export const Gallery = ({ houseType }: Props) => {
   const [images, plans] = getGalleryPicures(houseType);
   return (
-    <Stack
-      id={"gallery"}
-      display={"block"}
-      sx={
-        {
-          // "--swiper-navigation-color": Colors.primary,
-          // "--swiper-navigation-size": "20px", // optional
+    <Stack>
+      <Stack direction={"row"} justifyContent={"center"} my={4}>
+        <AppButton onClick={() => {}} title={"start"} />
+      </Stack>
+      <Stack
+        id={"gallery"}
+        display={"block"}
+        sx={
+          {
+            // "--swiper-navigation-color": Colors.primary,
+            // "--swiper-navigation-size": "20px", // optional
+          }
         }
-      }
-    >
-      <GlobalStyles
-        styles={{
-          ".swiper-button-next, .swiper-button-prev": {
-            backgroundColor: "black",
-            fontWeight: 900,
-            color: Colors.primary, // this is fallback, overridden by the CSS var
-            borderRadius: "50%",
-            width: "40px",
-            height: "40px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            // boxShadow: "0 2px 8px rgba(0, 0, 0, 0.3)",
-            zIndex: 10,
-          },
-          ".swiper-button-next::after, .swiper-button-prev::after": {
-            fontSize: "16px",
-          },
-        }}
-      />
-      <Swiper navigation={true} modules={[Navigation]} spaceBetween={0} slidesPerView={1} loop={true}>
-        {images.map((image, i) => (
-          <SwiperSlide
-            key={i}
-            style={
-              isMobile
-                ? { width: "100vw", maxWidth: "100vw", height: "auto", aspectRatio: "4 / 3", overflow: "hidden" }
-                : { width: "100%", height: "100vh", overflow: "hidden" }
-            }
-          >
-            <img
-              src={image}
-              alt={`Gallery image ${i + 1}`}
+      >
+        <GlobalStyles
+          styles={{
+            ".swiper-button-next, .swiper-button-prev": {
+              backgroundColor: "black",
+              fontWeight: 900,
+              color: Colors.primary, // this is fallback, overridden by the CSS var
+              borderRadius: "50%",
+              width: "40px",
+              height: "40px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              // boxShadow: "0 2px 8px rgba(0, 0, 0, 0.3)",
+              zIndex: 10,
+            },
+            ".swiper-button-next::after, .swiper-button-prev::after": {
+              fontSize: "16px",
+            },
+          }}
+        />
+        <Swiper navigation={true} modules={[Navigation]} spaceBetween={0} slidesPerView={1} loop={true}>
+          {images.map((image, i) => (
+            <SwiperSlide
+              key={i}
               style={
                 isMobile
-                  ? { width: "100%", height: "100%", objectFit: "cover", aspectRatio: "4 / 3", maxWidth: "100vw" }
-                  : { height: "auto", width: "100%" }
+                  ? { width: "100vw", maxWidth: "100vw", height: "auto", aspectRatio: "4 / 3", overflow: "hidden" }
+                  : { width: "100%", height: "100vh", overflow: "hidden" }
               }
-            />
-          </SwiperSlide>
-        ))}
+            >
+              <img
+                src={image}
+                alt={`Gallery image ${i + 1}`}
+                style={
+                  isMobile
+                    ? { width: "100%", height: "100%", objectFit: "cover", aspectRatio: "4 / 3", maxWidth: "100vw" }
+                    : { height: "auto", width: "100%" }
+                }
+              />
+            </SwiperSlide>
+          ))}
 
-        {plans.map((plan, i) => (
-          <SwiperSlide
-            key={i}
-            style={
-              window.innerWidth <= 768
-                ? {
-                    width: "100vw",
-                    maxWidth: "100vw",
-                    height: "auto",
-                    aspectRatio: "4 / 3",
-                    textAlign: "center",
-                    backgroundColor: Colors.white,
-                  }
-                : { width: "100%", height: "100vh", textAlign: "center", backgroundColor: Colors.white }
-            }
-          >
-            <img
-              src={plan}
-              alt={`Gallery image ${images.length + 1}`}
+          {plans.map((plan, i) => (
+            <SwiperSlide
+              key={i}
               style={
                 window.innerWidth <= 768
-                  ? { width: "100%", height: "100%", objectFit: "contain", aspectRatio: "4 / 3", maxWidth: "100vw" }
-                  : { height: "100%", width: "auto" }
+                  ? {
+                      width: "100vw",
+                      maxWidth: "100vw",
+                      height: "auto",
+                      aspectRatio: "4 / 3",
+                      textAlign: "center",
+                      backgroundColor: Colors.white,
+                    }
+                  : { width: "100%", height: "100vh", textAlign: "center", backgroundColor: Colors.white }
               }
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+            >
+              <img
+                src={plan}
+                alt={`Gallery image ${images.length + 1}`}
+                style={
+                  window.innerWidth <= 768
+                    ? { width: "100%", height: "100%", objectFit: "contain", aspectRatio: "4 / 3", maxWidth: "100vw" }
+                    : { height: "100%", width: "auto" }
+                }
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </Stack>
     </Stack>
   );
 };

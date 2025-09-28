@@ -5,16 +5,18 @@ type Props = {
   onClick: () => void;
   title: string;
   icon?: ReactNode;
+  variant?: "text" | "outlined" | "contained";
+  size?: "small" | "medium" | "large";
 };
 
-export const AppButton = ({ onClick, title, icon }: Props) => {
+export const AppButton = ({ onClick, title, icon, variant = "outlined", size }: Props) => {
   return (
     <Button
       onClick={onClick}
-      variant="outlined"
+      variant={variant}
       // disableTouchRipple
       // color={"primary"}
-      size={"large"}
+      size={size}
       // sx={{
       //   borderRadius: 3,
       // }}
