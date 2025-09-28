@@ -154,5 +154,9 @@
     "free": "Available",
     "inReservation": "Reserved",
     "sold": "Sold"
+  },
+  "gallery": {
+    "showImages": "Gallery images",
+    "showPlans": "Technical plans"
   }
 }

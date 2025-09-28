@@ -17,6 +17,10 @@ import { ContactCard } from "./ContactCard.tsx";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { AnimatedOnScroll } from "../AnimateOnScroll.tsx";
 
+function getLastChar(str: string): string {
+  return str.length > 0 ? str.charAt(str.length - 1) : "";
+}
+
 export const PropertyDetail = () => {
   const { id } = useParams();
   const { t, language } = useLanguage();
@@ -106,8 +110,8 @@ export const PropertyDetail = () => {
           </Stack>
         )}
       </Container>
+      {apartment && <Gallery houseType={house.type} showButtons apartmentNumber={getLastChar(apartment.number)} />}
 
-      <Gallery houseType={house.type}  showButtons/>
       <Houses title={t("navigation.otherHouses")} />
     </Stack>
   );

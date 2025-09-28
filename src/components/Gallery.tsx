@@ -4,28 +4,24 @@ import { Navigation } from "swiper/modules";
 import { Colors } from "../theme/colors.ts";
 import { isMobile } from "../App.tsx";
 import { HouseType } from "../constants/HouseTypes.ts";
-import { getImagePathsA, getImagePathsB, getImagePathsHome } from "../utils/getImagePaths.ts";
 import { AppButton } from "./AppButton.tsx";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
+import { useLanguage } from "../contexts/LanguageContext.tsx";
+import { getImagesFiltered } from "../utils/getImagePaths.ts";
 
 type Props = {
-  houseType?: HouseType;
+  houseType: HouseType;
+  apartmentNumber: string;
   showButtons?: boolean;
 };
 
-const getGalleryPicures = (houseType?: HouseType) => {
-  switch (houseType) {
-    case HouseType.A:
-      return getImagePathsA();
-    case HouseType.B:
-      return getImagePathsB();
-    default:
-      return getImagePathsHome();
-  }
-};
+export const Gallery = ({ houseType, showButtons, apartmentNumber }: Props) => {
+  const { t } = useLanguage();
+  const [images, plans] = [
+    getImagesFiltered("ap" + apartmentNumber),
+    getImagesFiltered(houseType === HouseType.A ? "APlan" : "BPlan"),
 
-export const Gallery = ({ houseType, showButtons }: Props) => {
-  const [images, plans] = getGalleryPicures(houseType);
+  ];
   const swiperRef = useRef<any>(null);
 
   const handleGoToFirstSlide = (index: number) => {
@@ -39,14 +35,20 @@ export const Gallery = ({ houseType, showButtons }: Props) => {
     }
   };
 
+  useEffect(() => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slideTo(0);
+    }
+  }, [apartmentNumber]);
+
   return (
     <Stack>
       {/* todo: add translation */}
       {showButtons && (
         <Stack direction={"row"} justifyContent={"center"} my={5} gap={2}>
           <>
-            <AppButton onClick={() => handleGoToFirstSlide(0)} title={"Vizualizace interiéru"} />
-            <AppButton onClick={() => handleGoToFirstSlide(images.length)} title={"Technický půdorys"} />
+            <AppButton onClick={() => handleGoToFirstSlide(0)} title={t("gallery.showImages")} />
+            <AppButton onClick={() => handleGoToFirstSlide(images.length)} title={t("gallery.showPlans")} />
           </>
         </Stack>
       )}

@@ -154,5 +154,9 @@
     "free": "Volný",
     "inReservation": "Rezervováno",
     "sold": "Prodáno"
+  },
+  "gallery": {
+    "showImages": "Vizualizace interiéru",
+    "showPlans": "Technický půdorys"
   }
 }
