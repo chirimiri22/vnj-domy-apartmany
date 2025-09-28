@@ -45,7 +45,7 @@ export const Gallery = ({ houseType, showButtons, apartmentNumber }: Props) => {
     <Stack>
       {/* todo: add translation */}
       {showButtons && (
-        <Stack direction={"row"} justifyContent={"center"} my={5} gap={2}>
+        <Stack direction={"row"} justifyContent={"center"} my={5} gap={2} mx={2}>
           <>
             <AppButton onClick={() => handleGoToFirstSlide(0)} title={t("gallery.showImages")} />
             <AppButton onClick={() => handleGoToFirstSlide(images.length)} title={t("gallery.showPlans")} />

@@ -16,6 +16,7 @@ import { Colors } from "../../theme/colors.ts";
 import { ContactCard } from "./ContactCard.tsx";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { AnimatedOnScroll } from "../AnimateOnScroll.tsx";
+import { isMobile } from "../../App.tsx";
 
 function getLastChar(str: string): string {
   return str.length > 0 ? str.charAt(str.length - 1) : "";
@@ -75,7 +76,7 @@ export const PropertyDetail = () => {
                 <Grid container spacing={3}>
                   <Grid size={{ xs: 6, md: 12 }}>
                     <Stack>
-                      <Typography variant="h4" fontWeight={600} sx={{ color: Colors.primary }}>
+                      <Typography variant={isMobile ? "h5" : "h4"} fontWeight={600} sx={{ color: Colors.primary }}>
                         {apartment.number}
                       </Typography>
                       <Typography variant="body2" fontWeight={500} color={Colors.secondary}>
@@ -85,7 +86,7 @@ export const PropertyDetail = () => {
                   </Grid>
                   <Grid size={{ xs: 6, md: 12 }}>
                     <Stack>
-                      <Typography variant="h4" fontWeight={600} sx={{ color: Colors.primary }}>
+                      <Typography variant={isMobile ? "h5" : "h4"}  fontWeight={600} sx={{ color: Colors.primary }}>
                         {apartment.price.toLocaleString(getLanguageForLocale())} {t("common.currency")}
                       </Typography>
                       <Typography variant="body2" fontWeight={500} color={Colors.secondary}>

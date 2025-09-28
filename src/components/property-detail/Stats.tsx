@@ -2,6 +2,7 @@ import { Grid, Stack, Typography } from "@mui/material";
 import type { Apartment } from "../../model/Apartment.ts";
 import { Colors } from "../../theme/colors.ts";
 import { useLanguage } from "../../contexts/LanguageContext";
+import { isMobile } from "../../App.tsx";
 
 type Props = {
   stats: Apartment;
@@ -33,7 +34,7 @@ export const Stats = (props: Props) => {
             <Grid size={{ xs: 6, md: 3 }} key={stat}>
               <Stack>
                 <Stack direction="row" alignItems="baseline" spacing={1}>
-                  <Typography variant="h4" fontWeight={600} sx={{ letterSpacing: "-0.015em" }}>
+                  <Typography variant={isMobile ? "h5" : "h4"}  fontWeight={600} sx={{ letterSpacing: "-0.015em" }}>
                     {props.stats[key]}
                   </Typography>
 
