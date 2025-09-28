@@ -8,10 +8,12 @@ import { base } from "../../constants/constants.ts";
 import { useNavigate } from "react-router";
 import { useLanguage } from "../../contexts/LanguageContext.tsx";
 import { forwardRef } from "react";
+import { HouseType } from "../../constants/HouseTypes.ts";
+import visualisationA from "../../assets/pictures/A1-transparent.png";
+import visualisationB from "../../assets/pictures/B4-transparent.png";
 
 type Props = {
   house: HouseDetail;
-  image?: string; // Optional image prop, if needed
 };
 
 type MotionBoxProps = BoxProps & MotionProps;
@@ -21,9 +23,11 @@ const MotionBox = motion(
     return <Box ref={ref} {...props} />;
   })
 );
-export const TitleSection = ({ house, image }: Props) => {
+export const TitleSection = ({ house }: Props) => {
   const navigate = useNavigate();
   const { t } = useLanguage();
+  const image = house.type === HouseType.A ? visualisationA : visualisationB
+
 
   return (
     <Stack
@@ -34,18 +38,16 @@ export const TitleSection = ({ house, image }: Props) => {
         pt: 5,
       }}
     >
-
-        <Button
-          variant={"outlined"}
-          sx={{ mb: 6, display: { xs: "flex", md: "none" }, width: "fit-content" }}
-          size={"large"}
-          onClick={() => navigate(`/${base}`)}
-          startIcon={<ArrowBackIcon />}
-        >
-          {" "}
-          {t("common.back")}
-        </Button>
-
+      <Button
+        variant={"outlined"}
+        sx={{ mb: 6, display: { xs: "flex", md: "none" }, width: "fit-content" }}
+        size={"large"}
+        onClick={() => navigate(`/${base}`)}
+        startIcon={<ArrowBackIcon />}
+      >
+        {" "}
+        {t("common.back")}
+      </Button>
 
       {/* Image animation */}
       <MotionBox

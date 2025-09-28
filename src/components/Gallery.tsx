@@ -1,19 +1,28 @@
-import bedroom from "../assets/home-gallery/bedroom.jpg";
-import flat_plan from "../assets/home-gallery/flat_plan.jpg";
-import kitchen from "../assets/home-gallery/kitchen.jpg";
-import living_room from "../assets/home-gallery/living_room.jpg";
-import panorama from "../assets/home-gallery/panorama.bmp";
-import one_house from "../assets/home-gallery/one_house.jpg";
-import house_plan from "../assets/home-gallery/house_plan.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { GlobalStyles, Stack } from "@mui/material";
 import { Navigation } from "swiper/modules";
 import { Colors } from "../theme/colors.ts";
 import { isMobile } from "../App.tsx";
+import { HouseType } from "../constants/HouseTypes.ts";
+import { getImagePathsA, getImagePathsB, getImagePathsHome } from "../utils/getImagePaths.ts";
 
-export const Gallery = () => {
-  const images = [living_room, bedroom, kitchen, panorama, one_house];
-  const plans = [flat_plan, house_plan];
+type Props = {
+  houseType?: HouseType;
+};
+
+const getGalleryPicures = (houseType?: HouseType) => {
+  switch (houseType) {
+    case HouseType.A:
+      return getImagePathsA();
+    case HouseType.B:
+      return getImagePathsB();
+    default:
+      return getImagePathsHome();
+  }
+};
+
+export const Gallery = ({ houseType }: Props) => {
+  const [images, plans] = getGalleryPicures(houseType);
   return (
     <Stack
       id={"gallery"}
