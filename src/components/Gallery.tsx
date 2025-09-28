@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { GlobalStyles, Stack } from "@mui/material";
 import { Navigation } from "swiper/modules";
 import { Colors } from "../theme/colors.ts";
-import App, { isMobile } from "../App.tsx";
+import { isMobile } from "../App.tsx";
 import { HouseType } from "../constants/HouseTypes.ts";
 import { getImagePathsA, getImagePathsB, getImagePathsHome } from "../utils/getImagePaths.ts";
 import { AppButton } from "./AppButton.tsx";
