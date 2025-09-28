@@ -14,6 +14,7 @@ import { base } from "../constants/constants.ts";
 import { apartmentToCol } from "../utils/apartmentToCol.ts";
 import { useScrollToTopOnLoad } from "../hook/useScrollToTopOnLoad.ts";
 import { useLanguage } from "../contexts/LanguageContext";
+import { AnimatedOnScroll } from "./AnimateOnScroll.tsx";
 
 export const Home = () => {
   const { t } = useLanguage();
@@ -30,11 +31,13 @@ export const Home = () => {
       <Houses />
       <Container sx={{pb: 6}} >
         <Stack alignItems={"center"} gap={2}>
-          <AppButton
-            icon={showTable ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-            onClick={() => setShowTable((prev) => !prev)}
-            title={t("common.showAllApartments")}
-          />
+          <AnimatedOnScroll>
+            <AppButton
+              icon={showTable ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+              onClick={() => setShowTable((prev) => !prev)}
+              title={t("common.showAllApartments")}
+            />
+          </AnimatedOnScroll>
 
           <Collapse in={showTable} style={{ width: "100%" }}>
             <PropertyList apartments={allApartments} onClickProperty={(id) => navigate(`/${base}/${id}`)} />

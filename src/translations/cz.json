@@ -104,7 +104,8 @@
       "electrical": "Elektrorozvody jsou ukončeny kabelovým vývodem. Svítidla nejsou součástí standardní dodávky. V obývacím pokoji je 1 datová zásuvka pro příjem internetu a TV. Rozmístění zásuvek a vypínačů je předmětem projektové dokumentace, vyjma kuchyňského koutu, kde budou všechny rozvody ukončeny nad podlahou u bytového jádra. Elektroměry jsou umístěny v elektroměrovém pilířku v chodbě.",
       "ventilation": "WC a koupelny budou odvětrány ventilátory s doběhem, které budou umístěny v horní části obestavby instalačních šachet a budou osazeny 300 mm pod úrovní podhledu. Pro kuchyňské digestoře bude připraveno vyústění vzduchotechniky pod stropem (zakrytí potrubí od digestoře není součástí standardu).",
       "furniture": "Kvalitní vybavení koupelen a kuchyní pro váš komfort."
-    }
+      },
+    "meaning": "Bydlení znamená..."
   },
   "footer": {
     "copyright": "© 2024 Your Company. All rights reserved."

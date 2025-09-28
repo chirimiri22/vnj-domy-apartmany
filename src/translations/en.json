@@ -104,7 +104,8 @@
       "electrical": "Electrical outlets provided; fixtures not included. One data socket for internet/TV in the living room. Socket/switch layout follows project documentation, except kitchen area where all wiring ends above the floor near the apartment core. Meters are in the corridor cabinet.",
       "ventilation": "Bathrooms and toilets ventilated by delayed fans, located at the top of installation shafts, 300 mm below ceiling. Kitchen hood ducts prepared under ceiling (covering not included).",
       "furniture": "High-quality bathroom and kitchen furnishings for your comfort."
-    }
+    },
+    "meaning": "Living means..."
   },
   "footer": {
     "copyright": "© 2024 Your Company. All rights reserved."

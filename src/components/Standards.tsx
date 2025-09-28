@@ -1,6 +1,8 @@
 import { Container, Stack, Typography } from "@mui/material";
 import { useLanguage } from "../contexts/LanguageContext";
 import { DataGridPremium, gridClasses, type GridColDef, type GridRowsProp } from "@mui/x-data-grid-premium";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 type StandardItem = {
   category: string;
@@ -58,18 +60,40 @@ export const Standards = () => {
 
   const paragraphs = ["freedom", "familySpace", "activeLife", "quietLife", "newHome"];
 
+  // Local animated paragraph component
+  const AnimatedParagraph = ({ paragraphKey }: { paragraphKey: string }) => {
+    const ref = useRef(null);
+    const inView = useInView(ref, { once: true, margin: "-100px" });
+    return (
+      <Stack ref={ref}>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+        >
+          <Typography variant="h3" color={"primary"}>
+            {t(`standards.paragraphs.${paragraphKey}.title`)}
+          </Typography>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7, ease: "easeOut", delay: 0.3 }}
+        >
+          <Typography>
+            {t(`standards.paragraphs.${paragraphKey}.paragraph`)}
+          </Typography>
+        </motion.div>
+      </Stack>
+    );
+  };
+
   return (
     <Container sx={{ display: "flex", flexDirection: "column", gap: 2, pb: 4, pt: 4 }}>
-      {/* todo: transaltions */}
-      <Typography variant={"h2"}>Bydlení znamená...</Typography>
+      <Typography variant={"h2"}>{t("standards.meaning")}</Typography>
       <Stack>
         {paragraphs.map((key) => (
-          <Stack key={key}>
-            <Typography variant="h3" color={"primary"}>
-              {t(`standards.paragraphs.${key}.title`)}
-            </Typography>
-            <Typography>{t(`standards.paragraphs.${key}.paragraph`)}</Typography>
-          </Stack>
+          <AnimatedParagraph key={key} paragraphKey={key} />
         ))}
       </Stack>
 
@@ -99,64 +123,3 @@ export const Standards = () => {
     </Container>
   );
 };
-
-// const StandardItemCard = ({ item }: { item: StandardItem }) => {
-//   const [expanded, setExpanded] = useState(false);
-//   const [hover, setHover] = useState(false);
-//   const maxLength = 70;
-//
-//   const theme = useTheme();
-//   const isMdUp = useMediaQuery(theme.breakpoints.up("md")); // true pro md a větší
-//
-//   // pokud je menší než md, limit je neomezený
-//   const effectiveMaxLength = isMdUp ? maxLength : item.description.length;
-//
-//   const isLong = item.description.length > effectiveMaxLength;
-//   const displayedText = expanded || !isLong ? item.description : item.description.slice(0, effectiveMaxLength) + "...";
-//
-//   return (
-//     <Stack
-//       sx={{
-//         py: 1,
-//         height: "100%",
-//         position: "relative",
-//       }}
-//       onMouseEnter={() => setHover(true)}
-//       onMouseLeave={() => setHover(false)}
-//     >
-//       <Typography variant="h5" sx={{ fontWeight: 700 }}>
-//         {item.category}
-//       </Typography>
-//
-//       <Typography
-//         variant="body2"
-//         sx={{
-//           mt: 1,
-//           pr: 4,
-//           color: "text.secondary",
-//         }}
-//       >
-//         {displayedText}
-//       </Typography>
-//
-//       {isLong && !expanded && (
-//         <Typography
-//           variant="body2"
-//           sx={{
-//             mt: 0.5,
-//             color: "primary.main",
-//             cursor: "pointer",
-//             fontWeight: 500,
-//             textTransform: "none",
-//             opacity: hover ? 1 : 0.3,
-//             transition: "opacity 0.2s",
-//           }}
-//           onClick={() => setExpanded((prev) => !prev)}
-//         >
-//           {/*todo: translation*/}
-//           více
-//         </Typography>
-//       )}
-//     </Stack>
-//   );
-// };

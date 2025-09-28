@@ -16,6 +16,7 @@ import type { Apartment } from "../../model/Apartment.ts";
 import { Colors } from "../../theme/colors.ts";
 import { ContactCard } from "./ContactCard.tsx";
 import { useLanguage } from "../../contexts/LanguageContext";
+import { AnimatedOnScroll } from "../AnimateOnScroll.tsx";
 
 export const PropertyDetail = () => {
   const { id } = useParams();
@@ -64,35 +65,41 @@ export const PropertyDetail = () => {
           onClickProperty={handleApartmentClick}
           selectedApartmentId={apartment?.id}
         />
+
         {apartment && (
-          <Stack direction={{ xs: "column", md: "row" }} gap={10} py={6}>
+          <Stack direction={{ xs: "column", md: "row" }} gap={{ xs: 3, md: 10 }} py={6}>
             <Stack flex={1}>
-              <Grid container spacing={3}>
-                <Grid size={{ xs: 6, md: 12 }}>
-                  <Stack>
-                    <Typography variant="h4" fontWeight={600} sx={{ color: Colors.primary }}>
-                      {apartment.number}
-                    </Typography>
-                    <Typography variant="body2" fontWeight={500} color={Colors.secondary}>
-                      {t("propertyDetail.apartmentNumber")}
-                    </Typography>
-                  </Stack>
+              <AnimatedOnScroll key={apartment.id}>
+                <Grid container spacing={3}>
+                  <Grid size={{ xs: 6, md: 12 }}>
+                    <Stack>
+                      <Typography variant="h4" fontWeight={600} sx={{ color: Colors.primary }}>
+                        {apartment.number}
+                      </Typography>
+                      <Typography variant="body2" fontWeight={500} color={Colors.secondary}>
+                        {t("propertyDetail.apartmentNumber")}
+                      </Typography>
+                    </Stack>
+                  </Grid>
+                  <Grid size={{ xs: 6, md: 12 }}>
+                    <Stack>
+                      <Typography variant="h4" fontWeight={600} sx={{ color: Colors.primary }}>
+                        {apartment.price.toLocaleString(getLanguageForLocale())} {t("common.currency")}
+                      </Typography>
+                      <Typography variant="body2" fontWeight={500} color={Colors.secondary}>
+                        {t("propertyDetail.price")}
+                      </Typography>
+                    </Stack>
+                  </Grid>
                 </Grid>
-                <Grid size={{ xs: 6, md: 12 }}>
-                  <Stack>
-                    <Typography variant="h4" fontWeight={600} sx={{ color: Colors.primary }}>
-                      {apartment.price.toLocaleString(getLanguageForLocale())} {t("common.currency")}
-                    </Typography>
-                    <Typography variant="body2" fontWeight={500} color={Colors.secondary}>
-                      {t("propertyDetail.price")}
-                    </Typography>
-                  </Stack>
-                </Grid>
-              </Grid>
+              </AnimatedOnScroll>
+
               <ContactCard {...contact} sx={{ my: 4, display: { xs: "none", md: "flex" } }} />
             </Stack>
             <Stack flex={2}>
-              <Stats stats={apartment} />
+              <AnimatedOnScroll key={apartment.id}>
+                <Stats stats={apartment} />
+              </AnimatedOnScroll>
               <Typography mt={5} mb={{ md: 8, xs: 2 }}>
                 {t("propertyDetail.houseDescription")}
               </Typography>
