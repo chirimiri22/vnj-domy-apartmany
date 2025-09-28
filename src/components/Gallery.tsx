@@ -6,6 +6,7 @@ import App, { isMobile } from "../App.tsx";
 import { HouseType } from "../constants/HouseTypes.ts";
 import { getImagePathsA, getImagePathsB, getImagePathsHome } from "../utils/getImagePaths.ts";
 import { AppButton } from "./AppButton.tsx";
+import { useRef } from "react";
 
 type Props = {
   houseType?: HouseType;
@@ -24,11 +25,27 @@ const getGalleryPicures = (houseType?: HouseType) => {
 
 export const Gallery = ({ houseType }: Props) => {
   const [images, plans] = getGalleryPicures(houseType);
+  const swiperRef = useRef<any>(null);
+
+  const handleGoToFirstSlide = (index: number) => {
+    const galleryElement = document.getElementById("gallery");
+    if (galleryElement) {
+      galleryElement.scrollIntoView({ behavior: "smooth" });
+    }
+
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slideTo(index);
+    }
+  };
+
   return (
     <Stack>
-      <Stack direction={"row"} justifyContent={"center"} my={4}>
-        <AppButton onClick={() => {}} title={"start"} />
+      <Stack direction={"row"} justifyContent={"center"} my={4} gap={2}>
+        {/* todo: add translation */}
+        <AppButton onClick={() => handleGoToFirstSlide(0)} title={"Vizualizace interiéru"} />
+        <AppButton onClick={() => handleGoToFirstSlide(images.length)} title={"Technický půdorys"} />
       </Stack>
+
       <Stack
         id={"gallery"}
         display={"block"}
@@ -59,7 +76,7 @@ export const Gallery = ({ houseType }: Props) => {
             },
           }}
         />
-        <Swiper navigation={true} modules={[Navigation]} spaceBetween={0} slidesPerView={1} loop={true}>
+        <Swiper navigation={true} modules={[Navigation]} spaceBetween={0} slidesPerView={1} loop={true} ref={swiperRef}>
           {images.map((image, i) => (
             <SwiperSlide
               key={i}
