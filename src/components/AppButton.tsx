@@ -9,7 +9,7 @@ type Props = {
   size?: "small" | "medium" | "large";
 };
 
-export const AppButton = ({ onClick, title, icon, variant = "outlined", size }: Props) => {
+export const AppButton = ({ onClick, title, icon, variant = "outlined", size = "large" }: Props) => {
   return (
     <Button
       onClick={onClick}

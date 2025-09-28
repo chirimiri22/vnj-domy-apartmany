@@ -10,6 +10,7 @@ import { useRef } from "react";
 
 type Props = {
   houseType?: HouseType;
+  showButtons?: boolean;
 };
 
 const getGalleryPicures = (houseType?: HouseType) => {
@@ -23,7 +24,7 @@ const getGalleryPicures = (houseType?: HouseType) => {
   }
 };
 
-export const Gallery = ({ houseType }: Props) => {
+export const Gallery = ({ houseType, showButtons }: Props) => {
   const [images, plans] = getGalleryPicures(houseType);
   const swiperRef = useRef<any>(null);
 
@@ -40,11 +41,15 @@ export const Gallery = ({ houseType }: Props) => {
 
   return (
     <Stack>
-      <Stack direction={"row"} justifyContent={"center"} my={4} gap={2}>
-        {/* todo: add translation */}
-        <AppButton onClick={() => handleGoToFirstSlide(0)} title={"Vizualizace interiéru"} />
-        <AppButton onClick={() => handleGoToFirstSlide(images.length)} title={"Technický půdorys"} />
-      </Stack>
+      {/* todo: add translation */}
+      {showButtons && (
+        <Stack direction={"row"} justifyContent={"center"} my={5} gap={2}>
+          <>
+            <AppButton onClick={() => handleGoToFirstSlide(0)} title={"Vizualizace interiéru"} />
+            <AppButton onClick={() => handleGoToFirstSlide(images.length)} title={"Technický půdorys"} />
+          </>
+        </Stack>
+      )}
 
       <Stack
         id={"gallery"}

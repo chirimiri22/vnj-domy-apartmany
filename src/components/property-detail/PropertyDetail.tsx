@@ -65,7 +65,7 @@ export const PropertyDetail = () => {
         />
 
         {apartment && (
-          <Stack direction={{ xs: "column", md: "row" }} gap={{ xs: 3, md: 10 }} py={6}>
+          <Stack direction={{ xs: "column", md: "row" }} gap={{ xs: 3, md: 10 }} pt={6} pb={0}>
             <Stack flex={1}>
               <AnimatedOnScroll key={apartment.id}>
                 <Grid container spacing={3}>
@@ -107,7 +107,7 @@ export const PropertyDetail = () => {
         )}
       </Container>
 
-      <Gallery houseType={house.type} />
+      <Gallery houseType={house.type}  showButtons/>
       <Houses title={t("navigation.otherHouses")} />
     </Stack>
   );
