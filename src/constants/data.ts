@@ -1,11 +1,13 @@
 import type { HouseDetail } from "../model/HouseDetail.ts";
 import { ApartmentStatus } from "../model/ApartmentStatus.ts";
+import { HouseType } from "./HouseTypes.ts";
 
 export const data: HouseDetail[] = [
   {
-    id: "a",
+    id: "alzbeta",
     name: "Dům Alžběta",
     position: { x: 12, y: 3 },
+    type: HouseType.A,
     apartments: [
       {
         id: "RD1B1",
@@ -49,9 +51,10 @@ export const data: HouseDetail[] = [
     ],
   },
   {
-    id: "b",
+    id: "barbora",
     name: "Dům Barbora",
     position: { x: 3.5, y: 8 },
+    type: HouseType.B,
     apartments: [
       {
         id: "RD2B1",
@@ -95,9 +98,10 @@ export const data: HouseDetail[] = [
     ],
   },
   {
-    id: "c",
+    id: "cecilie",
     name: "Dům Cecílie",
     position: { x: 1.9, y: 6 },
+    type: HouseType.A,
     apartments: [
       {
         id: "RD3B1",
@@ -141,8 +145,9 @@ export const data: HouseDetail[] = [
     ],
   },
   {
-    id: "d",
+    id: "dana",
     name: "Dům Dana",
+    type: HouseType.B,
     position: { x: 1.3, y: 6 },
     apartments: [
       {
@@ -187,9 +192,10 @@ export const data: HouseDetail[] = [
     ],
   },
   {
-    id: "e",
+    id: "eliska",
     name: "Dům Eliška",
     position: { x: 1.3, y: 1.7 },
+    type: HouseType.A,
     apartments: [
       {
         id: "RD5B1",

@@ -2,8 +2,8 @@ import { Container, Grid, Stack, Typography } from "@mui/material";
 import { useParams } from "react-router";
 import { data } from "../../constants/data.ts";
 import { useEffect, useState } from "react";
-
-import visualisation from "../../assets/houses/A1-transparent.png";
+import visualisationA from "../../assets/houses/A1-transparent.png";
+import visualisationB from "../../assets/houses/B4-transparent.png";
 import { TitleSection } from "./TitleSection.tsx";
 import { Gallery } from "../Gallery.tsx";
 import { Stats } from "./Stats.tsx";
@@ -17,6 +17,7 @@ import { Colors } from "../../theme/colors.ts";
 import { ContactCard } from "./ContactCard.tsx";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { AnimatedOnScroll } from "../AnimateOnScroll.tsx";
+import { HouseType } from "../../constants/HouseTypes.ts";
 
 export const PropertyDetail = () => {
   const { id } = useParams();
@@ -58,8 +59,7 @@ export const PropertyDetail = () => {
   return (
     <Stack>
       <Container>
-        <TitleSection house={house} image={visualisation} />
-
+        <TitleSection house={house} image={house.type === HouseType.A ? visualisationA : visualisationB} />
         <PropertyList
           apartments={house.apartments.map((ap) => apartmentToCol(ap, house))}
           onClickProperty={handleApartmentClick}
