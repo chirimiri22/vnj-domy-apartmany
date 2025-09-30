@@ -111,7 +111,7 @@ export const Gallery = ({ images, plans = [], situationImages = [], showButtons 
           {/*  </SwiperSlide>*/}
           {/*))}*/}
 
-          {[ ...plans, ...situationImages].map((plan, i) => (
+          {[ ...images, ...plans, ...situationImages].map((plan, i) => (
             <SwiperSlide
               key={i}
               style={
