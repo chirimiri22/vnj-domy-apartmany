@@ -5,6 +5,7 @@ import { Colors } from "../theme/colors.ts";
 import { AppButton } from "./AppButton.tsx";
 import { useEffect, useRef } from "react";
 import { useLanguage } from "../contexts/LanguageContext.tsx";
+import { isMobile } from "../App.tsx";
 
 type Props = {
   images: string[];
@@ -37,16 +38,14 @@ export const Gallery = ({ images, plans = [], situationImages = [], showButtons 
 
   return (
     <Stack>
-      {showButtons && (
-        <Stack direction={"row"} justifyContent={"center"} my={5} gap={2} mx={2}>
-          <>
-            <AppButton onClick={() => handleGoToFirstSlide(0)} title={t("gallery.showImages")} />
-            <AppButton onClick={() => handleGoToFirstSlide(images.length)} title={t("gallery.showPlans")} />
-            <AppButton
-              onClick={() => handleGoToFirstSlide(images.length + plans.length)}
-              title={t("gallery.situation")}
-            />
-          </>
+      {!isMobile && showButtons && (
+        <Stack direction={"row"} justifyContent={"center"} my={5} gap={2} mx={2} flexWrap={"wrap"}>
+          <AppButton onClick={() => handleGoToFirstSlide(0)} title={t("gallery.showImages")} />
+          <AppButton onClick={() => handleGoToFirstSlide(images.length)} title={t("gallery.showPlans")} />
+          <AppButton
+            onClick={() => handleGoToFirstSlide(images.length + plans.length)}
+            title={t("gallery.situation")}
+          />
         </Stack>
       )}
 
@@ -111,7 +110,7 @@ export const Gallery = ({ images, plans = [], situationImages = [], showButtons 
           {/*  </SwiperSlide>*/}
           {/*))}*/}
 
-          {[ ...images, ...plans, ...situationImages].map((plan, i) => (
+          {[...images, ...plans, ...situationImages].map((plan, i) => (
             <SwiperSlide
               key={i}
               style={
@@ -139,6 +138,16 @@ export const Gallery = ({ images, plans = [], situationImages = [], showButtons 
             </SwiperSlide>
           ))}
         </Swiper>
+        {isMobile && showButtons && (
+          <Stack direction={"row"} justifyContent={"center"} my={5} gap={2} mx={2} flexWrap={"wrap"}>
+            <AppButton onClick={() => handleGoToFirstSlide(0)} title={t("gallery.showImages")} />
+            <AppButton onClick={() => handleGoToFirstSlide(images.length)} title={t("gallery.showPlans")} />
+            <AppButton
+              onClick={() => handleGoToFirstSlide(images.length + plans.length)}
+              title={t("gallery.situation")}
+            />
+          </Stack>
+        )}
       </Stack>
     </Stack>
   );

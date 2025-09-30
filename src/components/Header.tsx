@@ -5,6 +5,7 @@ import { useLanguage } from "../contexts/LanguageContext";
 
 import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
 import { mapUrl } from "../constants/constants.ts";
+import { isMobile } from "../App.tsx";
 
 const languages = ["cz", "en"] as const;
 
@@ -20,7 +21,7 @@ export const Header = ({ sx }: Props) => {
       <Container sx={{ position: "relative" }}>
         <AppLink
           startIcon={<PlaceOutlinedIcon />}
-          title={t("navigation.vysokeNadJizerou")}
+          title={isMobile ? "" : t("navigation.vysokeNadJizerou")}
           onClick={() => {
             window.open(mapUrl);
           }}
