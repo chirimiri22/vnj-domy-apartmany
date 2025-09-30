@@ -157,6 +157,7 @@
   },
   "gallery": {
     "showImages": "Gallery images",
-    "showPlans": "Technical plans"
+    "showPlans": "Technical plans",
+    "situation": "Wider area situation"
   }
 }

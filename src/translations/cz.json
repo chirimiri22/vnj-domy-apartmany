@@ -157,6 +157,7 @@
   },
   "gallery": {
     "showImages": "Vizualizace interiéru",
-    "showPlans": "Technický půdorys"
+    "showPlans": "Technický půdorys",
+    "situation": "Situace širšího okolí"
   }
 }

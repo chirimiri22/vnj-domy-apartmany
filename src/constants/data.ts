@@ -1,13 +1,24 @@
 import type { HouseDetail } from "../model/HouseDetail.ts";
 import { ApartmentStatus } from "../model/ApartmentStatus.ts";
 import { HouseType } from "./HouseTypes.ts";
+import { A_PLAN, APARTMENT_IMAGES_1, APARTMENT_IMAGES_2, APARTMENT_IMAGES_3, B_PLAN } from "./pictures_imports.ts";
 
+import SITUATION_IMAGE1 from "../assets/pictures/situations/RD1.webp";
+import SITUATION_IMAGE2 from "../assets/pictures/situations/RD2.webp";
+import SITUATION_IMAGE3 from "../assets/pictures/situations/RD3.webp";
+import SITUATION_IMAGE4 from "../assets/pictures/situations/RD4.webp";
+import SITUATION_IMAGE5 from "../assets/pictures/situations/RD5.webp";
+
+// ap1-14.webp  ap1-16.webp  ap1-1.webp  ap1-3.webp  ap1-5.webp  ap1-9.webp   ap2-11.webp  ap2-14.webp  ap2-3.webp  ap2-5.jpg   ap3-2.webp  ap3-4.webp  ap3-9.webp
+// ap1-15.webp  ap1-17.webp  ap1-2.webp  ap1-4.webp  ap1-8.webp  ap2-10.webp  ap2-13.webp  ap2-2.webp   ap2-4.webp  ap3-1.webp  ap3-3.webp  ap3-7.webp
 export const data: HouseDetail[] = [
   {
     id: "alzbeta",
     name: "Dům Alžběta",
     position: { x: 12, y: 3 },
     type: HouseType.A,
+    housePlans: A_PLAN,
+    situationImage: SITUATION_IMAGE1,
     apartments: [
       {
         id: "RD1B1",
@@ -21,6 +32,7 @@ export const data: HouseDetail[] = [
         garage: 1,
         price: 16073870,
         status: ApartmentStatus.Sold,
+        apartmentImages: APARTMENT_IMAGES_1,
       },
       {
         id: "RD1B2",
@@ -34,6 +46,7 @@ export const data: HouseDetail[] = [
         garage: 1,
         price: 11828209,
         status: ApartmentStatus.Sold,
+        apartmentImages: APARTMENT_IMAGES_2,
       },
       {
         id: "RD1B3",
@@ -47,6 +60,7 @@ export const data: HouseDetail[] = [
         garage: 1,
         price: 11445521,
         status: ApartmentStatus.Sold,
+        apartmentImages: APARTMENT_IMAGES_3,
       },
     ],
   },
@@ -55,6 +69,8 @@ export const data: HouseDetail[] = [
     name: "Dům Barbora",
     position: { x: 3.5, y: 8 },
     type: HouseType.B,
+    housePlans: B_PLAN,
+    situationImage: SITUATION_IMAGE2,
     apartments: [
       {
         id: "RD2B1",
@@ -68,6 +84,7 @@ export const data: HouseDetail[] = [
         garage: 1,
         price: 16370494,
         status: ApartmentStatus.Sold,
+        apartmentImages: APARTMENT_IMAGES_1,
       },
       {
         id: "RD2B2",
@@ -81,6 +98,7 @@ export const data: HouseDetail[] = [
         garage: 1,
         price: 11826739,
         status: ApartmentStatus.Free,
+        apartmentImages: APARTMENT_IMAGES_2,
       },
       {
         id: "RD2B3",
@@ -94,6 +112,7 @@ export const data: HouseDetail[] = [
         garage: 1,
         price: 11239361,
         status: ApartmentStatus.InReservation,
+        apartmentImages: APARTMENT_IMAGES_3,
       },
     ],
   },
@@ -102,6 +121,8 @@ export const data: HouseDetail[] = [
     name: "Dům Cecílie",
     position: { x: 1.9, y: 6 },
     type: HouseType.A,
+    housePlans: A_PLAN,
+    situationImage: SITUATION_IMAGE3,
     apartments: [
       {
         id: "RD3B1",
@@ -115,6 +136,7 @@ export const data: HouseDetail[] = [
         garage: 1,
         price: 16085958,
         status: ApartmentStatus.Free,
+        apartmentImages: APARTMENT_IMAGES_1,
       },
       {
         id: "RD3B2",
@@ -128,6 +150,7 @@ export const data: HouseDetail[] = [
         garage: 1,
         price: 11840952,
         status: ApartmentStatus.Free,
+        apartmentImages: APARTMENT_IMAGES_2,
       },
       {
         id: "RD3B3",
@@ -141,6 +164,7 @@ export const data: HouseDetail[] = [
         garage: 1,
         price: 11253911,
         status: ApartmentStatus.Sold,
+        apartmentImages: APARTMENT_IMAGES_3,
       },
     ],
   },
@@ -149,6 +173,8 @@ export const data: HouseDetail[] = [
     name: "Dům Dana",
     type: HouseType.B,
     position: { x: 1.3, y: 6 },
+    housePlans: B_PLAN,
+    situationImage: SITUATION_IMAGE4,
     apartments: [
       {
         id: "RD4B1",
@@ -162,6 +188,7 @@ export const data: HouseDetail[] = [
         garage: 1,
         price: 16376845,
         status: ApartmentStatus.Free,
+        apartmentImages: APARTMENT_IMAGES_1,
       },
       {
         id: "RD4B2",
@@ -175,6 +202,7 @@ export const data: HouseDetail[] = [
         garage: 1,
         price: 11615095,
         status: ApartmentStatus.InReservation,
+        apartmentImages: APARTMENT_IMAGES_2,
       },
       {
         id: "RD4B3",
@@ -188,6 +216,7 @@ export const data: HouseDetail[] = [
         garage: 1,
         price: 11041329,
         status: ApartmentStatus.Free,
+        apartmentImages: APARTMENT_IMAGES_3,
       },
     ],
   },
@@ -196,6 +225,8 @@ export const data: HouseDetail[] = [
     name: "Dům Eliška",
     position: { x: 1.3, y: 1.7 },
     type: HouseType.A,
+    housePlans: A_PLAN,
+    situationImage: SITUATION_IMAGE5,
     apartments: [
       {
         id: "RD5B1",
@@ -209,6 +240,7 @@ export const data: HouseDetail[] = [
         garage: 1,
         price: 16094327,
         status: ApartmentStatus.Free,
+        apartmentImages: APARTMENT_IMAGES_1,
       },
       {
         id: "RD5B2",
@@ -222,6 +254,7 @@ export const data: HouseDetail[] = [
         garage: 1,
         price: 11631241,
         status: ApartmentStatus.InReservation,
+        apartmentImages: APARTMENT_IMAGES_2,
       },
       {
         id: "RD5B3",
@@ -235,6 +268,7 @@ export const data: HouseDetail[] = [
         garage: 1,
         price: 11057861,
         status: ApartmentStatus.Free,
+        apartmentImages: APARTMENT_IMAGES_3,
       },
     ],
   },

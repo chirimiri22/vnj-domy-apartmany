@@ -9,4 +9,7 @@ export type HouseDetail = {
   position: Position;
   apartments: Apartment[];
   type: HouseType;
+  situationImage: string;
+  housePlans: string[];
+
 };

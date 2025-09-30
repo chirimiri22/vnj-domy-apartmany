@@ -2,26 +2,20 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { GlobalStyles, Stack } from "@mui/material";
 import { Navigation } from "swiper/modules";
 import { Colors } from "../theme/colors.ts";
-// import { isMobile } from "../App.tsx";
-import { HouseType } from "../constants/HouseTypes.ts";
 import { AppButton } from "./AppButton.tsx";
 import { useEffect, useRef } from "react";
 import { useLanguage } from "../contexts/LanguageContext.tsx";
-import { getImagesFiltered } from "../utils/getImagePaths.ts";
 
 type Props = {
-  houseType: HouseType;
-  apartmentNumber: string;
+  images: string[];
+  plans?: string[];
+  situationImages?: string[];
   showButtons?: boolean;
 };
 
-export const Gallery = ({ houseType, showButtons, apartmentNumber }: Props) => {
+export const Gallery = ({ images, plans = [], situationImages = [], showButtons }: Props) => {
   const { t } = useLanguage();
-  const [images, plans] = [
-    getImagesFiltered("ap" + apartmentNumber),
-    getImagesFiltered(houseType === HouseType.A ? "APlan" : "BPlan"),
 
-  ];
   const swiperRef = useRef<any>(null);
 
   const handleGoToFirstSlide = (index: number) => {
@@ -39,16 +33,19 @@ export const Gallery = ({ houseType, showButtons, apartmentNumber }: Props) => {
     if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.slideTo(0);
     }
-  }, [apartmentNumber]);
+  }, [images]);
 
   return (
     <Stack>
-      {/* todo: add translation */}
       {showButtons && (
         <Stack direction={"row"} justifyContent={"center"} my={5} gap={2} mx={2}>
           <>
             <AppButton onClick={() => handleGoToFirstSlide(0)} title={t("gallery.showImages")} />
             <AppButton onClick={() => handleGoToFirstSlide(images.length)} title={t("gallery.showPlans")} />
+            <AppButton
+              onClick={() => handleGoToFirstSlide(images.length + plans.length)}
+              title={t("gallery.situation")}
+            />
           </>
         </Stack>
       )}
@@ -83,7 +80,16 @@ export const Gallery = ({ houseType, showButtons, apartmentNumber }: Props) => {
             },
           }}
         />
-        <Swiper navigation={true} modules={[Navigation]} spaceBetween={0} slidesPerView={1} loop={true} ref={swiperRef}>
+        <Swiper
+          navigation={true}
+          modules={[Navigation]}
+          spaceBetween={0}
+          slidesPerView={1}
+          loop={true}
+          ref={swiperRef}
+          style={{ width: "100%", height: "100%", maxWidth: "100%", maxHeight: "100%" }}
+        >
+          {/* THIS IS PICTURE STRETCH DESIGN */}
           {/*{images.map((image, i) => (*/}
           {/*  <SwiperSlide*/}
           {/*    key={i}*/}
@@ -105,7 +111,7 @@ export const Gallery = ({ houseType, showButtons, apartmentNumber }: Props) => {
           {/*  </SwiperSlide>*/}
           {/*))}*/}
 
-          {[...images, ...plans].map((plan, i) => (
+          {[ ...plans, ...situationImages].map((plan, i) => (
             <SwiperSlide
               key={i}
               style={

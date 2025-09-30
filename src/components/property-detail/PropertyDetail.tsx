@@ -2,7 +2,6 @@ import { Container, Grid, Stack, Typography } from "@mui/material";
 import { useParams } from "react-router";
 import { data } from "../../constants/data.ts";
 import { useEffect, useState } from "react";
-
 import { TitleSection } from "./TitleSection.tsx";
 import { Gallery } from "../Gallery.tsx";
 import { Stats } from "./Stats.tsx";
@@ -17,10 +16,6 @@ import { ContactCard } from "./ContactCard.tsx";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { AnimatedOnScroll } from "../AnimateOnScroll.tsx";
 import { isMobile } from "../../App.tsx";
-
-function getLastChar(str: string): string {
-  return str.length > 0 ? str.charAt(str.length - 1) : "";
-}
 
 export const PropertyDetail = () => {
   const { id } = useParams();
@@ -86,7 +81,7 @@ export const PropertyDetail = () => {
                   </Grid>
                   <Grid size={{ xs: 6, md: 12 }}>
                     <Stack>
-                      <Typography variant={isMobile ? "h5" : "h4"}  fontWeight={600} sx={{ color: Colors.primary }}>
+                      <Typography variant={isMobile ? "h5" : "h4"} fontWeight={600} sx={{ color: Colors.primary }}>
                         {apartment.price.toLocaleString(getLanguageForLocale())} {t("common.currency")}
                       </Typography>
                       <Typography variant="body2" fontWeight={500} color={Colors.secondary}>
@@ -111,7 +106,14 @@ export const PropertyDetail = () => {
           </Stack>
         )}
       </Container>
-      {apartment && <Gallery houseType={house.type} showButtons apartmentNumber={getLastChar(apartment.number)} />}
+      {apartment && (
+        <Gallery
+          images={apartment.apartmentImages}
+          plans={house.housePlans}
+          situationImages={[house.situationImage]}
+          showButtons
+        />
+      )}
 
       <Houses title={t("navigation.otherHouses")} />
     </Stack>
