@@ -37,7 +37,6 @@ export const Standards = () => {
       category: t("standards.categories.pavedAreas.title"),
       description: t("standards.categories.pavedAreas.description"),
     },
-    { category: t("standards.categories.notice.title"), description: t("standards.categories.notice.description") },
   ];
 
   const apartmentStandardsData: StandardItem[] = [
@@ -62,7 +61,6 @@ export const Standards = () => {
     { category: t("standards.categories.stairs.title"), description: t("standards.categories.stairs.description") },
     { category: t("standards.categories.doors.title"), description: t("standards.categories.doors.description") },
     { category: t("standards.categories.sanitary.title"), description: t("standards.categories.sanitary.description") },
-    { category: t("standards.categories.notice.title"), description: t("standards.categories.notice.description") },
   ];
 
   const paragraphs = ["freedom", "familySpace", "activeLife", "quietLife", "newHome"];
@@ -103,6 +101,7 @@ export const Standards = () => {
       </Stack>
       <StandartsGrid standartItems={houseStandardsData} title={t("standards.houseGridTitle")} />
       <StandartsGrid standartItems={apartmentStandardsData} title={t("standards.apartmentGridTitle")} />
+      <Typography sx={{mt: 2}}>{t("standards.notice")}</Typography>
     </Container>
   );
 };
