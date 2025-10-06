@@ -1,61 +1,38 @@
 import { Container, Stack, Typography } from "@mui/material";
 import { useLanguage } from "../contexts/LanguageContext";
-import { DataGridPremium, gridClasses, type GridColDef, type GridRowsProp } from "@mui/x-data-grid-premium";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-
-type StandardItem = {
-  category: string;
-  description: string;
-};
+import { type StandardItem, StandartsGrid } from "./StandartsGrid.tsx";
 
 export const Standards = () => {
   const { t } = useLanguage();
 
-  const standardsData: StandardItem[] = [
-    { category: t("standards.categories.foundation"), description: t("standards.descriptions.foundation") },
-    { category: t("standards.categories.exteriorWalls"), description: t("standards.descriptions.exteriorWalls") },
-    { category: t("standards.categories.ceiling"), description: t("standards.descriptions.ceiling") },
-    { category: t("standards.categories.stairs"), description: t("standards.descriptions.stairs") },
-    { category: t("standards.categories.roof"), description: t("standards.descriptions.roof") },
-    { category: t("standards.categories.partitions"), description: t("standards.descriptions.partitions") },
-    { category: t("standards.categories.interiorPlaster"), description: t("standards.descriptions.interiorPlaster") },
-    { category: t("standards.categories.facades"), description: t("standards.descriptions.facades") },
-    { category: t("standards.categories.openings"), description: t("standards.descriptions.openings") },
-    { category: t("standards.categories.sheetMetal"), description: t("standards.descriptions.sheetMetal") },
-    { category: t("standards.categories.floors"), description: t("standards.descriptions.floors") },
-    { category: t("standards.categories.tiles"), description: t("standards.descriptions.tiles") },
-    { category: t("standards.categories.laminateFloors"), description: t("standards.descriptions.laminateFloors") },
-    { category: t("standards.categories.pavedAreas"), description: t("standards.descriptions.pavedAreas") },
-    { category: t("standards.categories.fencing"), description: t("standards.descriptions.fencing") },
-    { category: t("standards.categories.waterMeters"), description: t("standards.descriptions.waterMeters") },
-    { category: t("standards.categories.heating"), description: t("standards.descriptions.heating") },
-    { category: t("standards.categories.electrical"), description: t("standards.descriptions.electrical") },
-    { category: t("standards.categories.ventilation"), description: t("standards.descriptions.ventilation") },
-    { category: t("standards.categories.furniture"), description: t("standards.descriptions.furniture") },
+  const houseStandardsData: StandardItem[] = [
+    { category: t("standards.categories.foundation.title"), description: t("standards.categories.foundation.description") },
+    { category: t("standards.categories.exteriorWalls.title"), description: t("standards.categories.exteriorWalls.description") },
+    { category: t("standards.categories.partitions.title"), description: t("standards.categories.partitions.description") },
+    { category: t("standards.categories.ceiling.title"), description: t("standards.categories.ceiling.description") },
+    { category: t("standards.categories.roof.title"), description: t("standards.categories.roof.description") },
+    { category: t("standards.categories.interiorPlaster.title"), description: t("standards.categories.interiorPlaster.description") },
+    { category: t("standards.categories.facades.title"), description: t("standards.categories.facades.description") },
+    { category: t("standards.categories.openings.title"), description: t("standards.categories.openings.description") },
+    { category: t("standards.categories.sheetMetal.title"), description: t("standards.categories.sheetMetal.description") },
+    { category: t("standards.categories.floors.title"), description: t("standards.categories.floors.description") },
+    { category: t("standards.categories.pavedAreas.title"), description: t("standards.categories.pavedAreas.description") },
+    { category: t("standards.categories.notice.title"), description: t("standards.categories.notice.description") },
   ];
 
-  // Převod na DataGrid rows (musí mít unikátní id)
-  const rows: GridRowsProp = standardsData.map((item, index) => ({
-    id: index + 1,
-    category: item.category,
-    description: item.description,
-  }));
-
-  const columns: GridColDef[] = [
-    {
-      field: "category",
-      headerName: t("standards.columns.category"),
-      flex: 1,
-      minWidth: 100,
-    },
-    {
-      field: "description",
-      headerName: t("standards.columns.description"),
-      flex: 2,
-      minWidth: 400,
-      cellClassName: "description-cell",
-    },
+  const apartmentStandardsData: StandardItem[] = [
+    { category: t("standards.categories.waterMeters.title"), description: t("standards.categories.waterMeters.description") },
+    { category: t("standards.categories.heating.title"), description: t("standards.categories.heating.description") },
+    { category: t("standards.categories.electrical.title"), description: t("standards.categories.electrical.description") },
+    { category: t("standards.categories.ventilation.title"), description: t("standards.categories.ventilation.description") },
+    { category: t("standards.categories.tiles.title"), description: t("standards.categories.tiles.description") },
+    { category: t("standards.categories.laminateFloors.title"), description: t("standards.categories.laminateFloors.description") },
+    { category: t("standards.categories.stairs.title"), description: t("standards.categories.stairs.description") },
+    { category: t("standards.categories.doors.title"), description: t("standards.categories.doors.description") },
+    { category: t("standards.categories.sanitary.title"), description: t("standards.categories.sanitary.description") },
+    { category: t("standards.categories.notice.title"), description: t("standards.categories.notice.description") },
   ];
 
   const paragraphs = ["freedom", "familySpace", "activeLife", "quietLife", "newHome"];
@@ -80,9 +57,7 @@ export const Standards = () => {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.3 }}
         >
-          <Typography>
-            {t(`standards.paragraphs.${paragraphKey}.paragraph`)}
-          </Typography>
+          <Typography>{t(`standards.paragraphs.${paragraphKey}.paragraph`)}</Typography>
         </motion.div>
       </Stack>
     );
@@ -96,30 +71,14 @@ export const Standards = () => {
           <AnimatedParagraph key={key} paragraphKey={key} />
         ))}
       </Stack>
-
-      <Typography variant={"h2"}>{t("standards.title")}</Typography>
-      <Stack>
-        <DataGridPremium
-          getRowHeight={() => "auto"}
-          rows={rows}
-          columns={columns}
-          hideFooter
-          sx={{
-            [`& .${gridClasses.cell}`]: {
-              py: 1,
-            },
-            "& .MuiDataGrid-row:hover": {
-              cursor: "pointer",
-            },
-            "& .MuiDataGrid-cell:focus, & .MuiDataGrid-cell:focus-within": {
-              outline: "none",
-            },
-            "& .MuiDataGrid-columnHeader:focus, & .MuiDataGrid-columnHeader:focus-within": {
-              outline: "none",
-            },
-          }}
-        />
-      </Stack>
+      <StandartsGrid
+        standartItems={houseStandardsData}
+        title={t("standards.houseGridTitle")}
+      />
+      <StandartsGrid
+        standartItems={apartmentStandardsData}
+        title={t("standards.apartmentGridTitle")}
+      />
     </Container>
   );
 };

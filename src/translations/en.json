@@ -32,7 +32,7 @@
     "motto": "Your new home in the heart of nature"
   },
   "standards": {
-    "title": "Standard Specifications",
+    "title": "Standard Specification",
     "columns": {
       "category": "Category",
       "description": "Description"
@@ -40,71 +40,111 @@
     "paragraphs": {
       "freedom": {
         "title": "Freedom and Tranquility in Picturesque Nature",
-        "paragraph": "Imagine waking up every day surrounded by breathtaking views of the Jizera and Krkonoše Mountains. A place where you feel free and unbound, far from the noise of everyday life. Family houses on the border of these beautiful mountains offer you the opportunity to start a new life in an environment synonymous with comfort and romance."
+        "paragraph": "Imagine a place where you wake up every day surrounded by breathtaking views of the Jizera and Krkonoše mountains. A place where you feel freedom and peace, far from the noise of everyday life. The family houses on the border of these beautiful mountains offer you the chance to start a new life in an environment synonymous with comfort and romance."
       },
       "familySpace": {
         "title": "Space for Family and Active Living",
-        "paragraph": "The family houses are designed to provide plenty of space for you and your loved ones. Spacious interiors offer a peaceful retreat, while beautifully landscaped gardens are perfect for your children’s enjoyment. The rustling wind in the treetops and the scent of blooming meadows accompany you at every step."
+        "paragraph": "The family houses are designed to provide plenty of space for you and your loved ones. Spacious interiors offer peace for relaxation, while beautifully landscaped gardens are ideal for your children's joy. The rustling wind in the treetops and the scent of blooming meadows will accompany you every step."
       },
       "activeLife": {
         "title": "Active Lifestyle Within Reach",
-        "paragraph": "Fans of active living will find plenty to do here. In winter, enjoy cross-country and downhill skiing on nearby trails and slopes. In summer, endless opportunities await for hiking and cycling—from easy family routes to challenging trips for experienced athletes. The surroundings are a paradise for anyone seeking movement in harmony with nature."
+        "paragraph": "Lovers of active movement will find plenty to enjoy here. In winter, you will appreciate the opportunity for cross-country and downhill skiing on nearby trails and slopes. In summer, there are endless options for hiking and cycling—from easy family routes to more challenging trips for experienced athletes. The surroundings are a paradise for anyone seeking activity in harmony with nature."
       },
       "quietLife": {
         "title": "Far from the Noise of Everyday Life",
-        "paragraph": "This unique location is ideal for those seeking peace and an escape from urban hustle. Living on the border of the Jizera and Krkonoše Mountains offers the perfect combination of natural beauty, modern comfort, and endless options for both relaxation and active leisure."
+        "paragraph": "This unique place is ideal for those who long for peace and an escape from the hustle and bustle of city life. Life on the border of the Jizera and Krkonoše mountains offers a perfect combination of natural beauty, modern living comfort, and endless opportunities for relaxation and active leisure."
       },
       "newHome": {
-        "title": "Your New Home Is Here",
-        "paragraph": "The family houses on the border of the Jizera and Krkonoše Mountains are more than just properties—they are the keys to a new lifestyle full of freedom, joy, and comfort. Wake up every morning with the feeling that you are in the right place, where nature and architecture create perfect harmony.\nCall us today and start writing a new chapter of your life in one of the most beautiful corners of the Czech Republic!"
+        "title": "Your New Home Starts Here",
+        "paragraph": "The family houses on the border of the Jizera and Krkonoše mountains are more than just real estate—they are the keys to a new lifestyle full of freedom, joy, and comfort. Wake up every morning with the feeling that you are in the right place, where nature and architecture create perfect harmony.\nCall us today and start writing a new chapter of your life in one of the most beautiful corners of the Czech Republic!\n"
       }
     },
-    "description": "In Vysoké nad Jizerou, an exclusive project of five new luxury family houses is under development, combining the advantages of modern living with the peace and beauty of the mountain landscape. Each house is designed with an emphasis on comfort and functionality—offering modern architecture in harmony with the surrounding nature, spacious layouts ideal for families with children, and a high standard of execution that meets the most demanding requirements. Quality materials, ample storage space, and thoughtful details for daily life are standard. The houses are located in a quiet part of the town, providing privacy and space for relaxation while being within walking distance of schools, shops, and services. Lovers of an active lifestyle will appreciate the proximity to hiking and cycling trails and ski resorts, making this location attractive year-round.",
-    "secondDescription": "This project is ideal for families seeking permanent housing in a safe and inspiring environment, as well as for those wishing to invest in a recreational or weekend property. Children can grow up close to nature, learning to appreciate their surroundings while spending their free time actively, while parents enjoy peace, fresh air, and an escape from city life. With construction limited to just five houses, the project offers exclusivity and an intimate atmosphere. If you are looking for a place where quality, design, and nature come together—Vysoké nad Jizerou could be the perfect home for your family. Contact us for more information or to schedule a personal tour—these houses are in high demand.",
+    "description": "An exclusive project of five new luxury family houses is being developed in Vysoké nad Jizerou, combining the advantages of modern living with the peace and beauty of the mountain landscape. Each house is designed with comfort and functionality in mind—offering modern architecture in harmony with the surrounding nature, spacious layouts ideal for families with children, and a high standard of execution to meet even the most demanding requirements. Quality materials, ample storage space, and thoughtful details are a matter of course. The houses are located in a quiet part of town, providing plenty of privacy and space for relaxation, yet within walking distance of schools, shops, and services. Active lifestyle enthusiasts will appreciate the proximity of hiking and cycling trails as well as ski resorts, making this location attractive all year round.",
+    "secondDescription": "This project is a great choice for families seeking permanent residence in a safe and inspiring environment, as well as for those looking to invest in a recreational or weekend property. Children can grow up in close proximity to nature, learn to appreciate their surroundings, and spend their free time actively, while parents will appreciate the peace, clean air, and the opportunity to escape the city. Construction is limited to just five houses, ensuring exclusivity and an intimate atmosphere for the entire project. If you are looking for a place where quality, design, and nature come together—Vysoké nad Jizerou may be the perfect home for your family. Contact us for more information or to arrange a personal tour—these houses are in high demand.",
     "categories": {
-      "foundation": "Foundations",
-      "exteriorWalls": "Exterior Load-Bearing Walls",
-      "ceiling": "Ceilings",
-      "stairs": "Stairs",
-      "roof": "Roof",
-      "partitions": "Partitions",
-      "interiorPlaster": "Interior Plaster",
-      "facades": "Facades",
-      "openings": "Openings",
-      "sheetMetal": "Sheet Metal Elements",
-      "floors": "Floors",
-      "tiles": "Tiles",
-      "laminateFloors": "Laminate Flooring",
-      "pavedAreas": "Paved Areas",
-      "fencing": "Fencing",
-      "waterMeters": "Water Meters",
-      "heating": "Heating",
-      "electrical": "Electrical Installation",
-      "ventilation": "Ventilation",
-      "furniture": "Furnishings"
+      "foundation": {
+        "title": "Foundation structures",
+        "description": "Strip foundations made of plain concrete."
+      },
+      "exteriorWalls": {
+        "title": "Exterior and load-bearing structures",
+        "description": "Ceramic brick blocks (thickness 300 mm), ceramic brick blocks AKU thickness 300 mm."
+      },
+      "partitions": {
+        "title": "Partitions",
+        "description": "Aerated concrete thickness 100 mm, 150 mm, 200 mm; ceramic blocks thickness 115 mm."
+      },
+      "ceiling": {
+        "title": "Ceiling structures",
+        "description": "Monolithic or prefabricated reinforced concrete ceilings."
+      },
+      "roof": {
+        "title": "Roof",
+        "description": "Truss roof, thermal insulation, PVC foil."
+      },
+      "interiorPlaster": {
+        "title": "Interior plasters",
+        "description": "Gypsum-lime or lime-cement white plasters."
+      },
+      "facades": {
+        "title": "Facades",
+        "description": "ETICS insulation thickness 140 mm, silicone plaster."
+      },
+      "openings": {
+        "title": "Openings",
+        "description": "Plastic windows and balcony doors with triple glazing (anthracite/wood decor), aluminum entrance doors with triple glazing (anthracite)."
+      },
+      "sheetMetal": {
+        "title": "Sheet metal elements",
+        "description": "Lacquered sheet metal."
+      },
+      "floors": {
+        "title": "Floors",
+        "description": "Concrete floor with surface finish according to standards."
+      },
+      "pavedAreas": {
+        "title": "Paved areas",
+        "description": "Parking spaces with grass/gravel pavers, walkway with concrete blocks, terrace with terrace tiles."
+      },
+      "waterMeters": {
+        "title": "Water management",
+        "description": "Each apartment has its own water meter, accumulation tank in the basement equipped with a pump."
+      },
+      "heating": {
+        "title": "Heating",
+        "description": "Gas boilers in a shared boiler room, towel radiators in bathrooms, hot water underfloor heating in living rooms. Additional PV source for hot water heating."
+      },
+      "electrical": {
+        "title": "Electrical installation",
+        "description": "Cable outlets, 1 data socket in each room. Lights and kitchen unit are not included."
+      },
+      "ventilation": {
+        "title": "Ventilation",
+        "description": "WC and bathrooms ventilated by fans, preparation for cooker hoods."
+      },
+      "tiles": {
+        "title": "Tiles and cladding",
+        "description": "In bathrooms with WC, separate WCs and bathrooms, tiles 60×60 cm. Tile height in WC 1.2 m, in bathroom 2.2 m. Outer corners finished with aluminum strip."
+      },
+      "laminateFloors": {
+        "title": "Laminate floors",
+        "description": "In the hallway, living rooms and living room with kitchenette (KAINDL Clic loc 8 mm, various decors). Includes skirting boards, underlay and vapor barrier foil."
+      },
+      "stairs": {
+        "title": "Stairs",
+        "description": "Wooden mezzanine stairs, oak stain, stringer, curved."
+      },
+      "doors": {
+        "title": "Doors",
+        "description": "Entrance doors: fire-resistant full CPL with peephole and TWIN hardware, height 197 cm. Interior doors: single-leaf full CPL with casing and TWIN LEKO VISION hardware."
+      },
+      "sanitary": {
+        "title": "Sanitary equipment",
+        "description": "Washbasins and hand basins MEREO, bathtub HOPA BESCO TERMI, WC EBS URBAN CITY wall-hung, HL 406 siphon, KORALUX-Linear Max 600/1820 towel radiator."
+      }
     },
-    "descriptions": {
-      "foundation": "Standard foundation structures ensuring the stability of the house.",
-      "exteriorWalls": "Robust load-bearing walls for long-lasting durability.",
-      "ceiling": "Reinforced concrete slabs for solid and safe ceilings.",
-      "stairs": "Reinforced concrete staircases for comfortable access.",
-      "roof": "High-quality roof construction providing protection against weather.",
-      "partitions": "Ceramic blocks, 115 mm thick.",
-      "interiorPlaster": "Machine-applied lime-gypsum plaster, single layer, white.",
-      "facades": "ETICS insulation, class A quality, EPS (mineral wool in fire safety zones), 200 mm thick, silicone textured finish.",
-      "openings": "Windows and balcony doors – plastic profiles 82 mm, triple glazing, anthracite/white. Entrance doors – aluminum, triple glazing, anthracite.",
-      "sheetMetal": "Painted sheet metal elements.",
-      "floors": "Concrete floors, machine-smoothed with standard surface finish.",
-      "tiles": "Tiles in bathrooms with WC, separate WCs, and separate bathrooms.",
-      "laminateFloors": "Floating laminate floors in hallways, living areas, and kitchen corners.",
-      "pavedAreas": "Parking – grass/permeable paving. Sidewalk – 60 mm concrete blocks. Terrace – natural smooth 400x400 mm tiles.",
-      "fencing": "2D fence panels, 1230 mm high, anthracite.",
-      "waterMeters": "Each apartment has its own water meter.",
-      "heating": "Heating and hot water are provided by natural gas boilers in a shared boiler room. Apartments have steel radiators, with towel warmers in bathrooms.",
-      "electrical": "Electrical outlets provided; fixtures not included. One data socket for internet/TV in the living room. Socket/switch layout follows project documentation, except kitchen area where all wiring ends above the floor near the apartment core. Meters are in the corridor cabinet.",
-      "ventilation": "Bathrooms and toilets ventilated by delayed fans, located at the top of installation shafts, 300 mm below ceiling. Kitchen hood ducts prepared under ceiling (covering not included).",
-      "furniture": "High-quality bathroom and kitchen furnishings for your comfort."
-    },
+    "houseGridTitle": "Standard specification of a family house includes:",
+    "apartmentGridTitle": "Standard specification of an apartment includes:",
     "meaning": "Living means..."
   },
   "footer": {

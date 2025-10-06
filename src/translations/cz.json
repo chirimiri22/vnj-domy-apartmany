@@ -62,49 +62,89 @@
     "description": "Ve Vysokém nad Jizerou právě vzniká exkluzivní projekt výstavby pěti nových luxusních rodinných domů, které spojují výhody moderního bydlení s klidem a krásou horské krajiny. Každý z domů je navržen s důrazem na pohodlí a funkčnost – nabízí moderní architekturu v harmonii s okolní přírodou, prostorné dispozice ideální pro rodiny s dětmi a vysoký standard provedení, který splní i ty nejnáročnější požadavky. Samozřejmostí jsou kvalitní materiály, dostatek úložného prostoru a promyšlené detaily, které oceníte v každodenním životě. Domy se nacházejí v klidné části města, takže poskytují dostatek soukromí a prostoru pro odpočinek, zároveň jsou však v docházkové vzdálenosti od školy, obchodů i služeb. Milovníci aktivního životního stylu ocení blízkost turistických a cyklistických tras i lyžařských areálů, které dělají z této lokality atraktivní místo po celý rok.",
     "secondDescription": "Tento projekt je skvělou volbou jak pro rodiny hledající trvalé bydlení v bezpečném a inspirativním prostředí, tak pro ty, kdo chtějí investovat do rekreační nebo víkendové nemovitosti. Děti zde mohou vyrůstat v bezprostřední blízkosti přírody, učit se vztahu k okolí a trávit volný čas aktivně, zatímco rodiče ocení klid, čistý vzduch a možnost uniknout ruchu města. Výstavba je omezena na pouhých pět domů, což zajišťuje exkluzivitu a komorní atmosféru celého projektu. Pokud hledáte místo, kde se spojuje kvalita, design a příroda – Vysoké nad Jizerou může být tím pravým domovem pro vaši rodinu. Nezávazně nás kontaktujte pro více informací nebo si domluvte osobní prohlídku – o tyto domy je vysoký zájem.",
     "categories": {
-      "foundation": "Základové konstrukce",
-      "exteriorWalls": "Obvodové nosné konstrukce",
-      "ceiling": "Konstrukce stropů",
-      "stairs": "Schodiště",
-      "roof": "Střecha",
-      "partitions": "Příčky",
-      "interiorPlaster": "Omítky vnitřní",
-      "facades": "Fasády",
-      "openings": "Výplně otvorů",
-      "sheetMetal": "Klempířské prvky",
-      "floors": "Podlahy",
-      "tiles": "Dlažby",
-      "laminateFloors": "Laminátové podlahy",
-      "pavedAreas": "Zpevněné plochy",
-      "fencing": "Oplocení",
-      "waterMeters": "Vodoměry a měření spotřeby vody",
-      "heating": "Vytápění",
-      "electrical": "Elektroinstalace",
-      "ventilation": "Vzduchotechnika",
-      "furniture": "Zařizovací předměty"
-    },
-    "descriptions": {
-      "foundation": "Standardní základové konstrukce pro zajištění stability domu.",
-      "exteriorWalls": "Robustní nosné konstrukce pro dlouhou životnost budovy.",
-      "ceiling": "Zakládorovené monostřičky pro pevné a bezpečné stropy.",
-      "stairs": "Zakládorovené profildružování pro pohodlný přístup.",
-      "roof": "Kvalitní střešní konstrukce pro ochranu před povětrnostními vlivy.",
-      "partitions": "Keramické bloky tl. 115 mm.",
-      "interiorPlaster": "Strojní vápenosádrové, jednovrstvé, barva bílá.",
-      "facades": "Zateplení ETICS kvalitativní tř. A, z EPS (v místech daných PBŘ z minerální vlny) tl. 200 mm, silikonová zrnitá omítka.",
-      "openings": "Okna a balkónové dveře – plastové profily 82 mm, izolační trojsklo, barva antracit/bílá. Vstupní dveře – hliníkové, izolační trojsklo, barva antracit.",
-      "sheetMetal": "Lakovaný plech.",
-      "floors": "Betonová podlaha strojně hlazená s nášlapem dle standardů.",
-      "tiles": "S dlažbou je počítáno v koupelnách s WC, v samostatných WC a samostatných koupelnách.",
-      "laminateFloors": "S plovoucími lamino podlahami je počítáno v předsíni bytu, obytných místnostech a obývacím pokoji včetně kuchyňského koutu.",
-      "pavedAreas": "Parkovací stání – zatravňovací/vsakovací dlažba. Chodník – betonové tvarovky tl. 60 mm. Terasa – terasová dlažba přírodní hladká 400x400 mm.",
-      "fencing": "Plotový panel 2D výšky 1230 mm, barva antracit.",
-      "waterMeters": "Každý byt má vlastní vodoměr.",
-      "heating": "Zdrojem tepla pro vytápění a ohřev teplé vody budou sloužit kotle na zemní plyn umístěné ve společné kotelně. V bytech budou umístěna ocelová otopná tělesa, v koupelnách doplněná topnými žebříky.",
-      "electrical": "Elektrorozvody jsou ukončeny kabelovým vývodem. Svítidla nejsou součástí standardní dodávky. V obývacím pokoji je 1 datová zásuvka pro příjem internetu a TV. Rozmístění zásuvek a vypínačů je předmětem projektové dokumentace, vyjma kuchyňského koutu, kde budou všechny rozvody ukončeny nad podlahou u bytového jádra. Elektroměry jsou umístěny v elektroměrovém pilířku v chodbě.",
-      "ventilation": "WC a koupelny budou odvětrány ventilátory s doběhem, které budou umístěny v horní části obestavby instalačních šachet a budou osazeny 300 mm pod úrovní podhledu. Pro kuchyňské digestoře bude připraveno vyústění vzduchotechniky pod stropem (zakrytí potrubí od digestoře není součástí standardu).",
-      "furniture": "Kvalitní vybavení koupelen a kuchyní pro váš komfort."
+      "foundation": {
+        "title": "Základové konstrukce",
+        "description": "Základové pasy z prostého betonu."
       },
+      "exteriorWalls": {
+        "title": "Obvodové a nosné konstrukce",
+        "description": "Keramické cihelné bloky (tl. 300 mm), keramické cihelné bloky AKU tl. 300 mm."
+      },
+      "partitions": {
+        "title": "Příčky",
+        "description": "Porobeton tl. 100 mm, 150 mm, 200 mm; keramické bloky tl. 115 mm."
+      },
+      "ceiling": {
+        "title": "Konstrukce stropů",
+        "description": "Železobetonové monolitické nebo prefabrikované stropy."
+      },
+      "roof": {
+        "title": "Střecha",
+        "description": "Vazníkový krov, tepelná izolace, PVC fólie."
+      },
+      "interiorPlaster": {
+        "title": "Omítky vnitřní",
+        "description": "Vápenosádrové nebo vápenocementové bílé omítky."
+      },
+      "facades": {
+        "title": "Fasády",
+        "description": "Zateplení ETICS tl. 140 mm, silikonová omítka."
+      },
+      "openings": {
+        "title": "Výplně otvorů",
+        "description": "Plastová okna a balkónové dveře s trojsklem (antracit / dřevodekor), hliníkové vstupní dveře s trojsklem (antracit)."
+      },
+      "sheetMetal": {
+        "title": "Klempířské prvky",
+        "description": "Lakovaný plech."
+      },
+      "floors": {
+        "title": "Podlahy",
+        "description": "Betonová podlaha s nášlapem dle standardů."
+      },
+      "pavedAreas": {
+        "title": "Zpevněné plochy",
+        "description": "Parkovací stání ze zatravňovací/vsakovací dlažby, chodník z betonových tvarovek, terasa z terasové dlažby."
+      },
+      "waterMeters": {
+        "title": "Vodohospodářství",
+        "description": "Každý byt má vlastní vodoměr, akumulační nádrž v 1. PP vybavená čerpadlem."
+      },
+      "heating": {
+        "title": "Vytápění",
+        "description": "Plynové kotle ve společné kotelně, topné žebříky v koupelnách, teplovodní podlahové vytápění v obytných místnostech. Doplňkový zdroj FVE pro ohřev TUV."
+      },
+      "electrical": {
+        "title": "Elektroinstalace",
+        "description": "Kabelové vývody, 1 datová zásuvka v každém pokoji. Svítidla a kuchyňská linka nejsou součástí dodávky."
+      },
+      "ventilation": {
+        "title": "Vzduchotechnika",
+        "description": "WC a koupelny odvětrány ventilátory, příprava pro digestoře."
+      },
+      "tiles": {
+        "title": "Dlažby a obklady",
+        "description": "V koupelnách s WC, samostatných WC a koupelnách dlažba 60×60 cm. Výška obkladu ve WC 1,2 m, v koupelně 2,2 m. Vnější rohy zakončeny hliníkovou lištou."
+      },
+      "laminateFloors": {
+        "title": "Laminátové podlahy",
+        "description": "V předsíni, obytných místnostech a obývacím pokoji s kuchyňským koutem (KAINDL Clic loc 8 mm, různé dekory). Součástí jsou soklové lišty, podložka a parotěsná fólie."
+      },
+      "stairs": {
+        "title": "Schodiště",
+        "description": "Dřevěné mezonetové schodiště, dub lazura, schodnicové, křivočaré."
+      },
+      "doors": {
+        "title": "Dveře",
+        "description": "Vstupní dveře: požární plné CPL s kukátkem a kováním TWIN, výška 197 cm. Vnitřní dveře: jednokřídlé plné CPL s obložkovou zárubní a kováním TWIN LEKO VISION."
+      },
+      "sanitary": {
+        "title": "Sanitární vybavení",
+        "description": "Umyvadla a umývátka MEREO, vana HOPA BESCO TERMI, WC EBS URBAN CITY závěsné, sifon HL 406, topný žebřík KORALUX-Linear Max 600/1820."
+      }
+    },
+    "houseGridTitle": "Standardní provedení rodinného domu zahrnuje:",
+    "apartmentGridTitle": "Standardní provedení bytu zahrnuje:",
     "meaning": "Bydlení znamená..."
   },
   "footer": {
