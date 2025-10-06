@@ -42,4 +42,4 @@ export const APARTMENT_IMAGES_2 = [ap2_3, ap2_13, ap2_2, ap2_4, ap2_11, ap2_14, 
 
 export const APARTMENT_IMAGES_3 = [ap3_2, ap3_4, ap3_9, ap3_1, ap3_3, ap3_7];
 
-export const HOME_GALLERY_IMAGES = [ap1_3, ap2_2, ap3_7 ];
+export const HOME_GALLERY_IMAGES = [ap1_3, ap2_2, ap3_7];

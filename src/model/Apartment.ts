@@ -12,5 +12,5 @@ export type Apartment = {
   garage: number;
   price: number;
   status: ApartmentStatus;
-  apartmentImages: string[]
+  apartmentImages: string[];
 };

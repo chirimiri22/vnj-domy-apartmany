@@ -10,13 +10,10 @@ export type StandardItem = {
 type Props = {
   title?: string;
   standartItems: StandardItem[];
-
 };
 
-export const StandartsGrid = ({title, standartItems}: Props) => {
+export const StandartsGrid = ({ title, standartItems }: Props) => {
   const { t } = useLanguage();
-
-
 
   // Převod na DataGrid rows (musí mít unikátní id)
   const rows: GridRowsProp = standartItems.map((item, index) => ({

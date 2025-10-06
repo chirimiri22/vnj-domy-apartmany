@@ -46,7 +46,7 @@ export const PropertyList = ({ apartments, onClickProperty, selectedApartmentId 
   }, [selectedApartmentId, apartments, apiRef]);
 
   return (
-    <Stack >
+    <Stack>
       <DataGridPremium
         apiRef={apiRef}
         rows={apartments}

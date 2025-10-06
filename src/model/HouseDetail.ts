@@ -2,7 +2,6 @@ import type { Apartment } from "./Apartment.ts";
 import type { Position } from "./Position.ts";
 import { HouseType } from "../constants/HouseTypes.ts";
 
-
 export type HouseDetail = {
   id: string;
   name: string;
@@ -11,5 +10,4 @@ export type HouseDetail = {
   type: HouseType;
   situationImage: string;
   housePlans: string[];
-
 };

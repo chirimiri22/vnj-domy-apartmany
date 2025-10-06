@@ -9,7 +9,7 @@ export const Footer = () => {
       component="footer"
       alignItems="center"
       justifyContent="center"
-      sx={{ pt: 5, pb:2, color: Colors.white, opacity: 0.7 }}
+      sx={{ pt: 5, pb: 2, color: Colors.white, opacity: 0.7 }}
     >
       {t("footer.copyright")}
     </Stack>

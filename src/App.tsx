@@ -19,8 +19,6 @@ LicenseInfo.setLicenseKey(import.meta.env.REACT_APP_MUI_LICENCE_KEY ?? "");
 
 export const isMobile = window.innerWidth <= 768;
 
-
-
 function App() {
   return (
     <LanguageProvider>

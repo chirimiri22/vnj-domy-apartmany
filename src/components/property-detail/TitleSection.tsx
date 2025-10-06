@@ -26,8 +26,7 @@ const MotionBox = motion(
 export const TitleSection = ({ house }: Props) => {
   const navigate = useNavigate();
   const { t } = useLanguage();
-  const image = house.type === HouseType.A ? visualisationA : visualisationB
-
+  const image = house.type === HouseType.A ? visualisationA : visualisationB;
 
   return (
     <Stack
