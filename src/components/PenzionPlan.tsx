@@ -2,6 +2,7 @@ import { useState } from "react";
 import NP1 from "../assets/NP.png";
 import { Stack,  Select, MenuItem, Box } from "@mui/material";
 import { PenzionKonvaStage } from "./PenzionKonvaStage";
+import { PenzionFirstFloor } from "./PenzionFirstFloor.tsx";
 
 const isMobile = window.innerWidth <= 768;
 const width = window.innerWidth * (isMobile ? 1.05 : 0.8);
@@ -47,27 +48,7 @@ export const PenzionPlan = () => {
   return (
     <Stack position="relative" width={width} height={height} mb={6}>
       {selectedPoint !== 2 ? (
-        <Box
-          width={width}
-          height={height}
-          display="flex"
-          flexDirection="column"
-          alignItems="center"
-          justifyContent="center"
-          position="relative"
-        >
-
-          <img
-            src={penzionPoints[selectedPoint].img || undefined}
-            alt={penzionPoints[selectedPoint].title}
-            style={{
-              maxWidth: "100%",
-              maxHeight: height - 60,
-              borderRadius: 16,
-              boxShadow: "0 2px 16px rgba(0,0,0,0.2)",
-            }}
-          />
-        </Box>
+        <PenzionFirstFloor />
       ) : (
         <PenzionKonvaStage
           penzionPoints={penzionPoints}
