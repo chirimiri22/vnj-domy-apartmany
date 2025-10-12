@@ -101,7 +101,7 @@ export const Standards = () => {
       </Stack>
       <StandartsGrid standartItems={houseStandardsData} title={t("standards.houseGridTitle")} />
       <StandartsGrid standartItems={apartmentStandardsData} title={t("standards.apartmentGridTitle")} />
-      <Typography sx={{mt: 2}}>{t("standards.notice")}</Typography>
+      <Typography sx={{ mt: 2 }}>{t("standards.notice")}</Typography>
     </Container>
   );
 };

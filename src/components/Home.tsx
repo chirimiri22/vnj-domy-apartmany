@@ -30,8 +30,9 @@ export const Home = () => {
   return (
     <Stack>
       <Jumbotron />
-      <Houses />
-      <Container sx={{ pb: { xs: 6, md: 0 } }}>
+
+      <Container sx={{ pb: 6 }}>
+        <Houses />
         <Stack alignItems={"center"} gap={2}>
           <AnimatedOnScroll>
             <AppButton
